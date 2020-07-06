@@ -26,9 +26,9 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
+# theme: minima
+# plugins:
+#   - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -36,6 +36,8 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - auto
+  - support
 #   - node_modules
 #   - vendor/bundle/
 #   - vendor/cache/
