@@ -7,10 +7,7 @@ layout: home
 <div class="container">
   <div class="row mt-5 text-center">
     <h1>Automated dependency <span class="text-success">health</span> analysis</h1>
-    <p class="lead mt-3">Get alerted when your software dependencies become inactive, deprecated and more!</p>
-    <!-- <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary font-weight-bold border-white bg-white">Learn more</a>
-    </p> -->
+    <p class="lead mt-3">Get alerted when your software dependencies become inactive, archived and more!</p>
   </div>
   <div class="how-it-works text-center row">
     <h2>How It Works</h1>
@@ -37,7 +34,7 @@ layout: home
   </div>
   <div class="features row mt-5">
     <h2 class="text-center">Features</h2>
-    <div class="row mt-4 gx-5">
+    <div class="row mt-4 gx-5 gy-3">
       <div class="col-sm">
         <i class="fas fa-chart-line feature-icon d-block"></i>
         Check dependencies are actively being commited to.
@@ -47,28 +44,31 @@ layout: home
         Check for recent package releases.
       </div>
     </div>
-    <div class="row mt-4 gx-5">
+    <div class="row mt-4 gx-5 gy-3">
       <div class="col-sm">
         <i class="fas fa-skull-crossbones feature-icon d-block"></i>
-        Check for red flags such as package deprecation or the repository is archived.
+        Check for red flags such as package deprecation* or repository archival.<br /> <small>* for registries supporting structured deprecation.</small>
       </div>
       <div class="col-sm">
         <i class="fas fa-exclamation-triangle feature-icon d-block"></i>
         Warn when dependencies start to become unhealthy.
       </div>
     </div>
-    <div class="row mt-4 gx-5">
+    <div class="row mt-4 gx-5 gy-3">
       <div class="col-sm">
         <i class="fas fa-clipboard-list feature-icon d-block"></i>
-        Provide an overall report for a snapshot of your dependency project health.
+        Provide an overall report for a snapshot of your dependencies project health.
       </div>
       <div class="col-sm">
         <i class="fas fa-wrench feature-icon d-block"></i>
         Configure the checks via config.
       </div>
     </div>
-    <div class="row mt-4 text-center">
-      <div class="col">More checks coming soon!</div>
+    <div class="row mt-5 text-center">
+      <div class="col lead">More checks coming soon!</div>
     </div>
+  </div>
+  <div class="features row mt-5">
+    <h2 class="text-center">Language Support</h2>
   </div>
 </div>
