@@ -84,6 +84,10 @@ body {
   font-size: 3.5rem;
 }
 
+.fadeback {
+  color: rgb(55, 161, 239);
+}
+
 .floating-number {
   position: absolute;
   font-size: 1.7rem;
@@ -93,4 +97,11 @@ body {
 
 .step-description {
   font-size: 1rem;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: rgb(55, 161, 239);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
