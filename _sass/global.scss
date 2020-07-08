@@ -89,3 +89,14 @@ body {
   border-radius: 5px;
   padding: 0;
 }
+
+.floating-number {
+  position: absolute;
+  font-size: 1.7rem;
+  top: .2rem;
+  left: .7rem;
+}
+
+.step-description {
+  font-size: 1rem;
+}
