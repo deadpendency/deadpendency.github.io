@@ -66,3 +66,26 @@ body {
     font-size: 3.5rem;
   }
 }
+
+.icon-flipped {
+  transform: scaleY(-1);
+  -moz-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  -ms-transform: scaleY(-1);
+}
+
+// Home
+
+.how-it-works {
+  margin-top: 10rem;
+}
+
+.how-it-works-icons {
+  font-size: 3.5rem;
+}
+
+.demo-screenshot {
+  border: 3px solid black;
+  border-radius: 5px;
+  padding: 0;
+}

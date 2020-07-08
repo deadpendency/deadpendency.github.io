@@ -5,19 +5,27 @@
 layout: home
 ---
 <div class="container">
-  <div class="row">
+  <div class="row mt-5">
     <h1>Automated dependency <span class="text-success">health</span> analysis</h1>
     <p class="lead mt-3">Get alerted when your software dependencies become inactive, deprecated and more!</p>
     <!-- <p class="lead">
       <a href="#" class="btn btn-lg btn-secondary font-weight-bold border-white bg-white">Learn more</a>
     </p> -->
   </div>
-  <div class="row mt-5">
+  <div class="how-it-works row">
     <h2>How It Works</h1>
+    <div class="how-it-works-icons row mt-3">
+      <div class="col"><i class="fas fa-code-branch icon-flipped"></i></div>
+      <div class="col"><i class="fas fa-microscope"></i></div>
+      <div class="col"><i class="fas fa-clipboard-list"></i></div>
+    </div>
     <div class="row mt-3">
         <div class="col">Push a commit to your repo.</div>
-        <div class="col">Deadpendency analyizes your dependencies based on that commit.</div>
-        <div class="col">Recieve a health report via a GitHub check run.</div>
+        <div class="col"><span class="text-warning">Dead</span>pendency analyzes your dependencies based on that commit.</div>
+        <div class="col">Recieve a health report via a <a href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-status-checks">GitHub check run</a>.</div>
+    </div>
+    <div class="row mt-5 text-center">
+      <img class="demo-screenshot" src="/assets/image/deadpendency-example.png" />
     </div>
   </div>
 </div>
