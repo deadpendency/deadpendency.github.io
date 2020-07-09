@@ -1,0 +1,52 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: home
+---
+
+<h1>Why Use Deadpendency?</h1>
+
+<p>The case for deadpendency.</p>
+
+<h2>Keeping dependencies up to date is highly valuable</h2>
+
+In today's world most software depends on a web of open source libraries. Libraries are developed at varying rates but some see great improvement over time (usually due to corporate sponsorship). Keeping up to date with dependencies is a great way to improve a piece of software with minimal investment by the developers.
+
+There are fantastic tools that help automate keeping up to date such as a <a href="https://dependabot.com/" target="_blank">Dependabot</a>.
+
+<h2>Libraries have a lifecycle</h2>
+
+Keeping dependencies up to date is great, however it only works if the dependencies are still actively being developed and released. This doesn't help when dependencies become dead projects. In such a case these tools will still happily report you are on the latest aging version.
+
+<h2>Deadpendency fills this gap</h2>
+
+Deadpendency checks that your dependencies are still actively being developed and released. Being stuck on an inactive depenency is just as bad as not updating your dependencies. This is why you want both automated dependency updates/checking and deadpendency.
+
+<h2>Deadpendency is useful overtime</h2>
+
+When developing a new piece of software developers should be doing activity checks when selecting dependencies. Inactive dependencies shouldn't be used at that point, unless there is a special reason (eg. there are no alternative libraries).
+
+However, a piece of software will usually live for years. What is an active library at one point can easily change overtime. Deadpendency is valuable as a guarentee over the lifetime of a piece of software that its dependencies are still actively being developed.
+
+<h2>What is happening without Deadpendency?</h2>
+
+Currently either one of two things is happening. Either developers are manually keeping aware of dependency health, or nothing is doing this check and dependencies may be stagnant.
+
+<h2>When else is Deadpendency useful?</h2>
+
+<h3>You want a snapshot of current dependency health</h3>
+
+Sometimes developers may want to see what is going on with their dependencies get an overall report of health. Deadpendency emits warnings for dependencies that are becoming unhealthy helping identify potentially problematic ones.
+
+<h3>You fork a dependency temporarily</h3>
+
+In sames cases a dependecy will have a bug. To fix this quickly you may fork the dependency, while going through the process of upstreaming the fix. This might take a while to get in and then get released.
+
+Some (most?) dependency update tools will then ignore this dependency as a <a href="https://docs.npmjs.com/files/package.json#git-urls-as-dependencies" target="_blank">git dependency</a>. This is because it will assume you need this version from git and should ignore updates to the package in the registry.
+
+Deadpendency will imediately warn this dependency is sourced by a fork. After the fork stops getting any commits the check will eventually fail and the developers are alerted.
+
+<h3>You recieve PRs with new dependencies</h3>
+
+Deadpendency runs against the latest commit in each git push, including PRs. Thus it can act as a quick and automated feedback when people add dependencies that aren't well maintained.
