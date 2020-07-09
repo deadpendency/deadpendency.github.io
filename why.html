@@ -4,10 +4,47 @@
 
 layout: home
 ---
+<div class="why-page">
+<h1 class="mb-5">Why Use <span class="text-warning">Dead</span><span class="text-white"></span>pendency</span>?</h1>
 
-<h1>Why Use Deadpendency?</h1>
+<!--
+  - Dependency updates are great and important
+    - Free cash money
+    - Today's world of platform churn
+    - Problem - it takes a lot of effort to stay up to date
+  - Automated dependency update tools to the rescue
+    - Either auto update or auto fail the build when not updated
+    - Problem - a dead dependency will never be updated
+  - Enter deadpendency
+    - Now you get alerted when dependencies become inactive
+    - And there are other benefits
+-->
 
-<p>The case for deadpendency.</p>
+<h2>Updating to latest dependencies is awesome</h2>
+
+
+<h3>Minimal effort, large value</h3>
+
+With a few keystrokes a developer can bump a dependency version. For this effort, they (likely) improve the quality of their software.
+
+In some cases dependencies have breaking changes and more effort is required to upgrade. However, these bigger upgrades typically provide greater value (ie. a simpler, easy to use API). In this case updating a dependency is still an excellent payoff for the time investment.
+
+<h3>Dependency updates are mandatory</h3>
+
+In the modern world of software development, there is constant platform churn. Most major programming languages release major updates every year. Beyond programming languages, there is an array of platforms modern software dependends on. There are also interdependencies between an application's dependencies, making freezing any one to particular version difficult.
+
+The question is how long can dependency updates be delayed before it becomes a problem. Once significantly delayed, updating can become a massive undertaking. In some cases if left too long an application can become undeployable.
+
+<h3>Amazing dependency update tools</h3>
+
+Dependency update is important, but can be time consuming keeping up to date with many dependencies. Or even knowing updates are available.
+
+Thankfully there are excellent tools for keeping dependencies up to date such as <a href="https://dependabot.com/" target="_blank">Dependabot</a>.
+
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
 
 <h2>Keeping dependencies up to date is highly valuable</h2>
 
@@ -19,25 +56,25 @@ There are fantastic tools that help automate keeping up to date such as a <a hre
 
 Keeping dependencies up to date is great, however it only works if the dependencies are still actively being developed and released. This doesn't help when dependencies become dead projects. In such a case these tools will still happily report you are on the latest aging version.
 
-<h2>Deadpendency fills this gap</h2>
+<h2><span class="text-warning">Dead</span><span class="text-white">pendency</span> fills this gap</h2>
 
-Deadpendency checks that your dependencies are still actively being developed and released. Being stuck on an inactive depenency is just as bad as not updating your dependencies. This is why you want both automated dependency updates/checking and deadpendency.
+<span class="text-warning">Dead</span><span class="text-white">pendency</span> checks that your dependencies are still actively being developed and released. Being stuck on an inactive dependency is just as bad as not updating your dependencies. This is why you want both automated dependency updates/checking and <span class="text-warning">Dead</span><span class="text-white">pendency</span>.
 
-<h2>Deadpendency is useful overtime</h2>
+<h2><span class="text-warning">Dead</span><span class="text-white">pendency</span> is useful overtime</h2>
 
-When developing a new piece of software developers should be doing activity checks when selecting dependencies. Inactive dependencies shouldn't be used at that point, unless there is a special reason (eg. there are no alternative libraries).
+<p>When developing a new piece of software developers should be doing activity checks when selecting dependencies. This is because how healthy a project is, is crucial to making a final decision on what dependency to use.</p>
 
-However, a piece of software will usually live for years. What is an active library at one point can easily change overtime. Deadpendency is valuable as a guarentee over the lifetime of a piece of software that its dependencies are still actively being developed.
+<p>However, a piece of software will usually live for years. What is an active library at one point can easily change overtime. <span class="text-warning">Dead</span><span class="text-white">pendency</span> is valuable as a guarentee over the lifetime of a piece of software that its dependencies are still actively being developed.</p>
 
-<h2>What is happening without Deadpendency?</h2>
+<h2>What is happening without <span class="text-warning">Dead</span><span class="text-white">pendency</span>?</h2>
 
-Currently either one of two things is happening. Either developers are manually keeping aware of dependency health, or nothing is doing this check and dependencies may be stagnant.
+Currently either one of two things is happening. Either developers are manually keeping aware of dependency health which consumes time and focus, or nothing is doing this check and dependencies may be stagnant.
 
-<h2>When else is Deadpendency useful?</h2>
+<h2>When else is <span class="text-warning">Dead</span><span class="text-white">pendency</span> useful?</h2>
 
 <h3>You want a snapshot of current dependency health</h3>
 
-Sometimes developers may want to see what is going on with their dependencies get an overall report of health. Deadpendency emits warnings for dependencies that are becoming unhealthy helping identify potentially problematic ones.
+Sometimes developers may want to see what is going on with their dependencies get an overall report of health. <span class="text-warning">Dead</span><span class="text-white">pendency</span> emits warnings for dependencies that are becoming unhealthy helping identify potentially problematic ones.
 
 <h3>You fork a dependency temporarily</h3>
 
@@ -45,8 +82,11 @@ In sames cases a dependecy will have a bug. To fix this quickly you may fork the
 
 Some (most?) dependency update tools will then ignore this dependency as a <a href="https://docs.npmjs.com/files/package.json#git-urls-as-dependencies" target="_blank">git dependency</a>. This is because it will assume you need this version from git and should ignore updates to the package in the registry.
 
-Deadpendency will imediately warn this dependency is sourced by a fork. After the fork stops getting any commits the check will eventually fail and the developers are alerted.
+<span class="text-warning">Dead</span><span class="text-white">pendency</span> will imediately warn this dependency is sourced by a fork. After the fork stops getting any commits the check will eventually fail and the developers are alerted.
 
 <h3>You recieve PRs with new dependencies</h3>
 
-Deadpendency runs against the latest commit in each git push, including PRs. Thus it can act as a quick and automated feedback when people add dependencies that aren't well maintained.
+<span class="text-warning">Dead</span><span class="text-white">pendency</span> runs against the latest commit in each git push, including PRs. Thus it can act as a quick and automated feedback when people add dependencies that aren't well maintained.
+
+
+</div>
