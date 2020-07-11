@@ -32,15 +32,46 @@ In some cases dependencies have breaking changes and more effort is required to 
 
 In the modern world of software development, there is constant platform churn. Most major programming languages release major updates every year. Beyond programming languages, there is an array of platforms modern software depends on. There are also interdependencies between an application's dependencies, making freezing any one to particular version difficult.
 
-The question is how long can dependency updates be delayed before it becomes a problem. Once significantly delayed, updating can become a massive undertaking. In some cases if left too long an application can become undeployable.
+The question is how long can dependency updates be delayed before it becomes a problem. Once significantly delayed, updating can become a massive undertaking. In some cases if left too long an application can become undeployable without doing these updates.
 
 <h3>Amazing dependency update tools</h3>
 
-Dependency update is important, but can be time consuming keeping up to date with many dependencies. Or even knowing updates are available.
+Dependency updates are important, but can be time consuming keeping up to date with many dependencies.
 
 Thankfully there are excellent tools for keeping dependencies up to date such as <a href="https://dependabot.com/" target="_blank">Dependabot</a>.
 
+<h2>Dependency update tools have a gap</h2>
 
+<h3>Open source projects often become inactive</h3>
+
+In open source, projects often become inactive. Usually development is ceased and they sit <a href="https://en.wikipedia.org/wiki/Software_rot" target="_blank"></a>bitrotting</a>, or might slowly trickle along, but will never get new features. In some cases the dependency will be explicitly discontinued.
+
+This isn't necessarily a bad thing. Sometimes a library explores a new approach, the community learns from it, but ultimately this was not the end game solution. A new library can be developed with the new learnings and the cycle continues.
+
+<h3>Automated dependency tools ignore activity</h3>
+
+Dependencies that are dead or are on life support will either never have a new version released, or very infrequently. This is the gap in the automated dependency update approach as these tools do not alert you of such a problem.
+
+When you depend upon an inactive dependency, you are getting all the same downsides of never updating a dependency. Thus, to be in the best possible spot around dependencies, you need to constantly check dependency project health.
+
+This is not a flaw in automated dependency updating, which is excellent value to set up. It just means a different but related tool is needed like <span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> for maximal dependency health. Which is to say, all my application's dependencies are up to date and are actively being maintained.
+
+<h2><span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> to the rescue</h2>
+
+<h3></h3>
+
+<h3>How bad are inactive dependencies?</h3>
+
+Inactive dependencies will bit rot and fall behind with the platform churn of modern software development. They are 'not optimal' to use.
+
+However, sometimes you don't have a choice. There may alternative, or active alternatives have key flaws for your use case. <span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> doesn't imply you should never use dependencies that are 'dead'. Rather, it is there to make the choice a conscious deliberate one.
+
+In other cases, a dependency has been superseeded by a new library and this is a pretty easy win to switch.
+
+<h2>Other benefits</h2>
+
+
+<!--
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
@@ -85,7 +116,7 @@ Some (most?) dependency update tools will then ignore this dependency as a <a hr
 
 <h3>You recieve PRs with new dependencies</h3>
 
-<span class="text-warning">Dead</span><span class="text-white">pendency</span> runs against the latest commit in each git push, including PRs. Thus it can act as a quick and automated feedback when people add dependencies that aren't well maintained.
+<span class="text-warning">Dead</span><span class="text-white">pendency</span> runs against the latest commit in each git push, including PRs. Thus it can act as a quick and automated feedback when people add dependencies that aren't well maintained. -->
 
 
 </div>
