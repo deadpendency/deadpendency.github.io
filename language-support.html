@@ -1,0 +1,116 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: home
+---
+<div class="pricing-page">
+<h1 class="mb-4"><span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> Language Support</h1>
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Programming Language</th>
+      <th scope="col">Supported</th>
+      <th scope="col">File Types</th>
+      <th scope="col">Default Files Loaded</th>
+      <th scope="col">Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">JavaScript</td>
+      <td>✅</td>
+      <td>Npm package.json</td>
+      <td>./package.json</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">Python</td>
+      <td>✅</td>
+      <td>
+        <ul>
+          <li>Pip Requirements</li>
+          <li>Pypa Pipfile</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>./requirements.txt</li>
+          <li>./Pipfile</li>
+        </ul>
+      </td>
+      <td>Will not follow requirements.txt includes eg. `-r other-requirements.txt`.</td>
+    </tr>
+    <tr>
+      <th scope="row">Ruby</td>
+      <td>✅</td>
+      <td>
+        <ul>
+          <li>Gemfile</li>
+          <li>Gemspec</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>./Gemfile</li>
+          <li>./**/*.gemspec</li>
+        </ul>
+      </td>
+      <td>`*.gemspec` search only goes 1 level deep. `./other/dir/mylib.gemspec` will not be found.</td>
+    </tr>
+    <tr>
+      <th scope="row">PHP</td>
+      <td>✅</td>
+      <td>Composer</td>
+      <td>./composer.json</td>
+      <td><a href="https://getcomposer.org/doc/05-repositories.md#vcs" target="_blank">VCS dependencies</a> not yet supported.</td>
+    </tr>
+    <tr>
+      <th scope="row">Haskell</td>
+      <td>✅</td>
+      <td>
+        <ul>
+          <li>Cabal file</li>
+          <li>Hpack package.yaml</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>./**/*.cabal</li>
+          <li>./**/package.yaml</li>
+        </ul>
+      </td>
+      <td>Only searches 1 directory deep for dependency files.</td>
+    </tr>
+    <tr>
+      <th scope="row">Java</td>
+      <td>❌</td>
+      <td></td>
+      <td></td>
+      <td>Maven does not reference source repositories. Cannot be supported.</td>
+    </tr>
+    <tr>
+      <th scope="row">.NET</td>
+      <td>❌</td>
+      <td></td>
+      <td></td>
+      <td>Planned</td>
+    </tr>
+    <tr>
+      <th scope="row">Rust</td>
+      <td>❌</td>
+      <td></td>
+      <td></td>
+      <td>Planned</td>
+    </tr>
+    <tr>
+      <th scope="row">Go</td>
+      <td>❌</td>
+      <td></td>
+      <td></td>
+      <td>Planned</td>
+    </tr>
+  </tbody>
+</table>
+</div>
