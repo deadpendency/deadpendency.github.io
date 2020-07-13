@@ -22,7 +22,7 @@ layout: home
       <th scope="row">JavaScript</td>
       <td>✅</td>
       <td><a href="https://docs.npmjs.com/files/package.json" target="_blank">Npm package.json</a></td>
-      <td>./package.json</td>
+      <td><code>./package.json</code></td>
       <td></td>
     </tr>
     <tr>
@@ -36,11 +36,11 @@ layout: home
       </td>
       <td>
         <ul>
-          <li>./requirements.txt</li>
-          <li>./Pipfile</li>
+          <li><code>./requirements.txt</code></li>
+          <li><code>./Pipfile</code></li>
         </ul>
       </td>
-      <td>Will not follow requirements.txt includes eg. `-r other-requirements.txt`.</td>
+      <td>Will not follow <code>requirements.txt</code> includes eg. <code>-r other-requirements.txt</code>.</td>
     </tr>
     <tr>
       <th scope="row">Ruby</td>
@@ -53,17 +53,17 @@ layout: home
       </td>
       <td>
         <ul>
-          <li>./Gemfile</li>
-          <li>./**/*.gemspec</li>
+          <li><code>./Gemfile</code></li>
+          <li><code>./**/*.gemspec</code></li>
         </ul>
       </td>
-      <td>`*.gemspec` search only goes 1 level deep. `./other/dir/mylib.gemspec` will not be found.</td>
+      <td><code>*.gemspec</code> search only goes 1 level deep. <code>./other/dir/mylib.gemspec</code> will not be found.</td>
     </tr>
     <tr>
       <th scope="row">PHP</td>
       <td>✅</td>
       <td><a href="https://getcomposer.org/doc/01-basic-usage.md#composer-json-project-setup" target="_blank">Composer file</a></td>
-      <td>./composer.json</td>
+      <td><code>./composer.json</code></td>
       <td><a href="https://getcomposer.org/doc/05-repositories.md#vcs" target="_blank">VCS dependencies</a> not yet supported.</td>
     </tr>
     <tr>
@@ -77,8 +77,8 @@ layout: home
       </td>
       <td>
         <ul>
-          <li>./**/*.cabal</li>
-          <li>./**/package.yaml</li>
+          <li><code>./**/*.cabal</code></li>
+          <li><code>./**/package.yaml</code></li>
         </ul>
       </td>
       <td>Only searches 1 directory deep for dependency files.</td>
@@ -113,7 +113,7 @@ layout: home
     </tr>
     <tr>
       <th scope="row">Others</td>
-      <td>❌</td>
+      <td>❔</td>
       <td></td>
       <td></td>
       <td>If you want a language supported please <a href="" target="_blank">open an issue</a>.</td>
