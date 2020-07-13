@@ -28,17 +28,67 @@ layout: home
 <h4>Additional Dependency Files</h4>
 
 <p>
-  In some cases you have additional, or different dependency files to load than the default ones. These can be loaded like
+  In some cases you have additional, or different dependency files to load than the default ones. These can be loaded like:
 </p>
 
-<pre>
-<code>
-additional-dependency-files:
+<pre><code class="language-yaml">additional-dependency-files:
   - path: other-dependencies.txt
     type: pip-requirements-txt
   - path: ./custom/CustomPipfile
     type: pypa-pipfile
-</code>
-</pre>
+</code></pre>
+
+<p>File Types:
+  <ul>
+    <li>JavaScript Npm Package File - <code>npm-package-json</code></li>
+    <li>Python Pip Requirements File - <code>pip-requirements-txt</code></li>
+    <li>Python Pipenv Pipfile - <code>pipenv-pipfile</code></li>
+    <li>PHP Packagist Compose File - <code>packagist-composer-json</code></li>
+    <li>Ruby Bundler Gemfile - <code>bundler-gemfile</code></li>
+    <li>Ruby Gemspec - <code>rubygems-gemspec</code></li>
+    <li>Haskell Cabal File - <code>haskell-cabal</code></li>
+    <li>Haskell Hpack File - <code>hpack-package-yaml</code></li>
+  </ul>
+
+</p>
+
+<h4>Additional Dependencies</h4>
+
+<p>Useful when there are specific additional dependencies you want to be checked that are missing from your dependency files. Or for some reason <span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> is not detecting one.</p>
+
+<pre><code class="language-yaml">additional-deps:
+  javascript:
+    - react
+    - react-dom
+    - name: random-on-github
+      repo: some-org/super-random
+</code></pre>
+
+<h4>Ignore Dependencies</h4>
+
+<p>Useful when you choose to depend on an unhealthy dependency.</p>
+
+<pre><code class="language-yaml">ignore-failures:
+  - react-dom
+  - angularjs
+</code></pre>
+
+<h4>Configure <span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> checks</h4>
+
+<p>Each language ecosystem is different. What might be considered unhealthy for a JavaScript dependency may be fine in more niche languages such as Rust.</p>
+
+<pre><code class="language-yaml">rules-config:
+  no-recent-package-release:
+    warn-at-months: 6
+    error-at-months: 9
+  no-recent-commit:
+    warn-at-months: 3
+    error-at-months: 6
+  few-yearly-commits:
+    # warn-at-count: 6 - omitted to use the default
+    error-at-count: 3
+</code></pre>
+
+
 
 </div>
