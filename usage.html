@@ -1,0 +1,44 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: home
+---
+<div class="faq-page">
+<h1 class="mb-4"><span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> Usage</h1>
+
+<h2>Installation</h2>
+
+<p>
+  Go to the <a href="https://github.com/apps/deadpendency" target="_blank">Deadpendency GitHub app</a> and install it. Select which repositories to install the GitHub app on.
+</p>
+
+<h2>Usage</h2>
+
+<p>Deadpendency will automatically search for dependency files based on the language GitHub has assigned to your repository.</p>
+
+<p>Refer to <a href="/language-support">language support</a> for information on what dependency files are supported.</p>
+
+<h3>Configuration</h3>
+
+<p>
+  Configuration is done by including a <code>deadpendency.yaml</code> file in the root directory of your GitHub repository.
+</p>
+
+<h4>Additional Dependency Files</h4>
+
+<p>
+  In some cases you have additional, or different dependency files to load than the default ones. These can be loaded like
+</p>
+
+<pre>
+<code>
+additional-dependency-files:
+  - path: other-dependencies.txt
+    type: pip-requirements-txt
+  - path: ./custom/CustomPipfile
+    type: pypa-pipfile
+</code>
+</pre>
+
+</div>
