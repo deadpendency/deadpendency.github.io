@@ -21,15 +21,18 @@
       <header class="global-header mb-5">
         <div>
           <h3 class="float-md-left mb-0"><a href="/"><span class="text-warning">Dead</span><span class="text-white">pendency</span></a> <small><sub>BETA</sub></small></h3>
+
+          {% assign currentPage = page.url | downcase | remove: '.html' %}
+
           <nav class="nav nav-masthead justify-content-center float-md-right">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-            <a class="nav-link" href="/why">Why?</a>
-            <a class="nav-link" href="/pricing">Pricing</a>
-            <a class="nav-link" href="/language-support">Languages</a>
-            <a class="nav-link" href="/usage">Usage</a>
-            <a class="nav-link" href="/faq">FAQ</a>
-            <a class="nav-link" href="/rules">Rules</a>
-            <a class="nav-link" href="/terms">Terms</a>
+            <a class="nav-link {% if currentPage == '/' %}active{% endif %}" href="/">Home</a>
+            <a class="nav-link {% if currentPage == '/why' %}active{% endif %}" href="/why">Why?</a>
+            <a class="nav-link {% if currentPage == '/pricing' %}active{% endif %}" href="/pricing">Pricing</a>
+            <a class="nav-link {% if currentPage == '/language-support' %}active{% endif %}" href="/language-support">Languages</a>
+            <a class="nav-link {% if currentPage == '/usage' %}active{% endif %}" href="/usage">Usage</a>
+            <a class="nav-link {% if currentPage == '/faq' %}active{% endif %}" href="/faq">FAQ</a>
+            <a class="nav-link {% if currentPage == '/rules' %}active{% endif %}" href="/rules">Rules</a>
+            <a class="nav-link {% if currentPage == '/terms' %}active{% endif %}" href="/terms">Terms</a>
           </nav>
         </div>
       </header>
