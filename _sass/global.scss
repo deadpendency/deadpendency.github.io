@@ -78,6 +78,10 @@ a {
   color: #a8a8ff;
 }
 
+.global-header a {
+  text-decoration: none;
+}
+
 // Home
 
 .how-it-works {
@@ -132,7 +136,10 @@ a {
   padding-left: 1rem;
 }
 
+// FAQ page
+
 .faq-page h4 {
+  color: #45d2b2;
   margin-top: 20px;
   margin-bottom: 20px;
 }

@@ -5,7 +5,7 @@
 layout: home
 ---
 <div class="why-page">
-<h1 class="mb-4">Why Use <span class="text-warning">Dead</span><span class="text-white"></span>pendency</span>?</h1>
+<h1 class="mb-4">Why Use <span class="text-warning">Dead</span><span class="text-white">pendency</span>?</h1>
 
 <h2>Updating dependencies is awesome</h2>
 
@@ -41,21 +41,21 @@ layout: home
 
 <p>When you depend upon an inactive dependency, you are getting all the same downsides of never updating a dependency. Thus, to be in the best possible spot around dependencies, you need know your dependencies are actively being updated and released <strong>and</strong> be on the latest version.</p>
 
-<p>This is not a flaw in automated dependency updating, which is excellent value to set up. It just means a different but related tool is needed like <span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> for maximal dependency health.
+<p>This is not a flaw in automated dependency updating, which is excellent value to set up. It just means a different but related tool is needed like <span class="text-warning">Dead</span><span class="text-white">pendency</span> for maximal dependency health.
 
-<h2><span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> to the rescue</h2>
+<h2><span class="text-warning">Dead</span><span class="text-white">pendency</span> to the rescue</h2>
 
 <h3>Constant safeguarding against unhealthy dependencies</h3>
 
-<p><span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> is a GitHub app that runs a check against every push of code. This means over time, as maintainence works is done there are constant checks of dependency health. Continual checking here is important as dependencies that are healthy at a given point in time can be discontinued in the future.</p>
+<p><span class="text-warning">Dead</span><span class="text-white">pendency</span> is a <a href="https://docs.github.com/en/developers/apps/about-apps" target="_blank">GitHub app</a> that runs a check against every push of code. This means over time, as maintainence works is done there are constant checks of dependency health. Continual checking here is important as dependencies that are healthy at a given point in time can be discontinued in the future.</p>
 
 <h3>Should I stop using 'dead' dependencies?</h3>
 
 <p>Inactive dependencies will bit rot and fall behind with the platform churn of modern software development. They are 'not optimal' to use.</p>
 
-<p>However, sometimes you don't have a choice. There may be no alternative, or active alternatives have key flaws for your use case. <span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> <strong>doesn't</strong> imply you should never use dependencies that are 'dead'. Rather, it is there to make the choice a conscious and deliberate one.</p>
+<p>However, sometimes you don't have a choice. There may be no alternative, or active alternatives have key flaws for your use case. <span class="text-warning">Dead</span><span class="text-white">pendency</span> <strong>doesn't</strong> imply you should never use dependencies that are 'dead'. Rather, it is there to make the choice a conscious and deliberate one.</p>
 
-<p>Of course, in some cases there is a healthy alternative and indeed it should be switched to. This is the case where <span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> provides the most value.</p>
+<p>Of course, in some cases there is a healthy alternative and indeed it should be switched to. This is the case where <span class="text-warning">Dead</span><span class="text-white">pendency</span> provides the most value.</p>
 
 <h2>Other benefits</h2>
 
@@ -63,18 +63,20 @@ layout: home
 
 <p>A common issue with using open source dependencies is dealing with bugs. In this case often the dependency will be forked and the fork used as a <a href="https://docs.npmjs.com/files/package.json#git-urls-as-dependencies" target="_blank">git dependency</a> for a quick fix. Meanwhile, the fix is proposed via PR to the upstream repository. This can involve a lot of back and forth and delay before being merged and then released in a new version.</p>
 
-<p>In this case dependency update tools (most of them at least) will then ignore new versions of the dependnecy, as it must assume the git dependency is still required. This means the developers need to remember to come back and undepend on the fork. With <span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> the dependency immediately gets a warning as a forked repo. If overtime, it is left in place, the fork will not be getting commits and thus gets flagged as inactive.</p>
+<p>In this case dependency update tools (most of them at least) will then ignore new versions of the dependency, as it must assume the git dependency is still required. This means the developers need to remember to come back and undepend on the fork. With <span class="text-warning">Dead</span><span class="text-white">pendency</span> the dependency immediately gets a warning as a forked repo. If overtime, it is left in place, the fork will not be getting commits and thus gets flagged as inactive.</p>
 
 <p>An inactive dependency fails the check, so developers will be clearly reminded to revisit this fork usage.</p>
 
 <h3>A snapshot of dependency health</h3>
 
-<p><span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> flags dependencies that are quite unhealthy. It also flags dependencies with warnings that are starting to become unhealthy. This means at any time the <span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> report can be reviewed for a quick snapshot of dependency health.</p>
+<p><span class="text-warning">Dead</span><span class="text-white">pendency</span> flags dependencies that are quite unhealthy. It also flags dependencies with warnings that are starting to become unhealthy. This means at any time the <span class="text-warning">Dead</span><span class="text-white">pendency</span> report can be reviewed for a quick snapshot of dependency health.</p>
+
+<p>The <span class="text-warning">Dead</span><span class="text-white">pendency</span> report includes links to the dependency package and source repository enabling further review.</p>
 
 <h3>A gatekeeper for healthy dependencies</h3>
 
-<p>Much like a code linting check, <span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> acts as a fast feedback mechanism when unhealthy dependencies are attempted to be added via a PR. This works because <span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> runs against an exact commit sha.</p>
+<p>Much like a code linting check, <span class="text-warning">Dead</span><span class="text-white">pendency</span> acts as a fast feedback mechanism when unhealthy dependencies are attempted to be added via a PR. This works because <span class="text-warning">Dead</span><span class="text-white">pendency</span> runs against an exact commit sha.</p>
 
-<p>In this way, <span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> can save developers time by blocking unhealthy dependencies. Or at least, prompting a justification to be included for their usage.</p>
+<p>In this way, <span class="text-warning">Dead</span><span class="text-white">pendency</span> can save developers time by blocking unhealthy dependencies. Or at least, prompting a justification to be included for their usage.</p>
 
 </div>

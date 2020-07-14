@@ -5,7 +5,7 @@
 layout: home
 ---
 <div class="faq-page">
-<h1 class="mb-4"><span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> Usage</h1>
+<h1 class="mb-4"><span class="text-warning">Dead</span><span class="text-white">pendency</span> Usage</h1>
 
 <h2>Installation</h2>
 
@@ -22,7 +22,7 @@ layout: home
 <h3>Configuration</h3>
 
 <p>
-  Configuration is done by including a <code>deadpendency.yaml</code> file in the root directory of your GitHub repository.
+  Configuration is done by including a <code>deadpendency.yaml</code> file in the root directory of your GitHub repository. This file is optional.
 </p>
 
 <h4>Additional Dependency Files</h4>
@@ -34,8 +34,8 @@ layout: home
 <pre><code class="language-yaml">additional-dependency-files:
   - path: other-dependencies.txt
     type: pip-requirements-txt
-  - path: ./custom/CustomPipfile
-    type: pypa-pipfile
+  - path: custom/CustomPipfile
+    type: pipenv-pipfile
 </code></pre>
 
 <p>File Types:
@@ -49,12 +49,11 @@ layout: home
     <li>Haskell Cabal File - <code>haskell-cabal</code></li>
     <li>Haskell Hpack File - <code>hpack-package-yaml</code></li>
   </ul>
-
 </p>
 
 <h4>Additional Dependencies</h4>
 
-<p>Useful when there are specific additional dependencies you want to be checked that are missing from your dependency files. Or for some reason <span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> is not detecting one.</p>
+<p>Useful when there are specific additional dependencies you want to be checked that are missing from your dependency files. Or for some reason <span class="text-warning">Dead</span><span class="text-white">pendency</span> is not detecting them.</p>
 
 <pre><code class="language-yaml">additional-deps:
   javascript:
@@ -70,23 +69,20 @@ layout: home
 
 <pre><code class="language-yaml">ignore-failures:
   - react-dom
-  - angularjs
+  - angular
 </code></pre>
 
-<h4>Configure <span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> checks</h4>
+<h4>Configure <span class="text-warning">Dead</span><span class="text-white">pendency</span> checks</h4>
 
 <p>Each language ecosystem is different. What might be considered unhealthy for a JavaScript dependency may be fine in a more niche language.</p>
 
 <pre><code class="language-yaml">rules-config:
   no-recent-package-release:
-    warn-at-months: 6
-    error-at-months: 9
+    # warn-at-months: 6 - omitted to use the default
+    error-at-months: 12
   no-recent-commit:
-    warn-at-months: 3
-    error-at-months: 6
-  few-yearly-commits:
-    # warn-at-count: 6 - omitted to use the default
-    error-at-count: 3
+    warn-at-months: 6
+    error-at-months: 12
 </code></pre>
 
 <p>See <a href="/rules">rules</a> for detailed information on rules and defaults.</p>

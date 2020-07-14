@@ -5,10 +5,10 @@
 layout: home
 ---
 <div class="language-support-page">
-<h1 class="mb-4"><span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> Rules</h1>
+<h1 class="mb-4"><span class="text-warning">Dead</span><span class="text-white">pendency</span> Rules</h1>
 
 <p>
-  <span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> performs the following checks. See <a href="/usage#configure-rules" target="_blank">rules usage</a> for details on using the rules config.
+  <span class="text-warning">Dead</span><span class="text-white">pendency</span> performs the following checks. See <a href="/usage#configure-rules" target="_blank">rules usage</a> for details on using the rules config.
 </p>
 
 <p>Rules that perform checks against the source repository currently only support GitHub repositories. More git hosts are planned to be supported.</p>
@@ -33,10 +33,9 @@ layout: home
       <td>
         <pre><code class="language-yaml">no-recent-commit:
   warn-at-months: 3
-  fail-at-months: 6
-        </code></pre>
+  fail-at-months: 6</code></pre>
       </td>
-      <td></td>
+      <td>Cannot be configured to more than 24 months.</td>
     </tr>
     <tr>
       <th scope="row">Few Yearly Commits</td>
@@ -46,8 +45,7 @@ layout: home
       <td>
         <pre><code class="language-yaml">few-yearly-commits:
   warn-at-count: 6
-  fail-at-count: 3
-        </code></pre>
+  fail-at-count: 3</code></pre>
       </td>
       <td></td>
     </tr>
@@ -59,8 +57,7 @@ layout: home
       <td>
         <pre><code class="language-yaml">no-recent-package-release:
   warn-at-months: 6
-  fail-at-months: 9
-        </code></pre>
+  fail-at-months: 9</code></pre>
       </td>
       <td></td>
     </tr>

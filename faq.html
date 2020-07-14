@@ -5,30 +5,33 @@
 layout: home
 ---
 <div class="faq-page">
-<h1 class="mb-4"><span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> FAQ</h1>
+<h1 class="mb-4"><span class="text-warning">Dead</span><span class="text-white">pendency</span> FAQ</h1>
 
-<h4 class="text-info">What does <span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> detect?</h3>
+<h4>What does <span class="text-warning">Dead</span><span class="text-white">pendency</span> detect?</h3>
 <p>It detects dependencies that have project health issues. For example is the dependency repository still actively being committed to.</p>
 
-<h4 class="text-info">If a dependency is marked as unhealthy, should I stop using it?</h4>
+<h4>If a dependency is marked as unhealthy, should I stop using it?</h4>
 <p>No! This is a call to action to review the dependency and make a decision as to whether to switch away or not.</p>
 <p>In many cases it makes sense to keep using the dependency (eg. there are no viable alternatives). In this case, the dependency can be ignored from deadpendency checks.</p>
 
-<h4 class="text-info">Why isn't Java supported?</h4>
+<h4>What does BETA mean?</h4>
+<p><span class="text-warning">Dead</span><span class="text-white">pendency</span> is newly developed. There are a lot of possible edge cases with many languages and registries. It will take some time and work handle these and the system to become very reliable.</p>
+
+<h4>Why isn't Java supported?</h4>
 <p>Maven does not provide the source repository of its packages.</p>
 
-<h4 class="text-info">Why isn't Other language supported?</h4>
+<h4>Why isn't Other language supported?</h4>
 <p>Support is either not possible, planned, or the language is considered too niche. Feel free to create / upvote the relevant issue.</p>
 
-<h4 class="text-info">Which package registries support structured deprecation?</h4>
-<p>Currently NPM (JavaScript), Nuget (.NET) and Hackage (Haskell).</p>
+<h4>Which package registries support structured deprecation?</h4>
+<p>Currently NPM (JavaScript), Nuget (.NET) and Hackage (Haskell). .NET support is under development.</p>
 
-<h4 class="text-info">Why isn't <span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> available for private repositories?</h4>
+<h4>Why isn't <span class="text-warning">Dead</span><span class="text-white">pendency</span> available for private repositories?</h4>
 <p>
-  <span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> is in beta. The focus is on improving and stablizing the system before making it available for purchase on private repositories.
+  <span class="text-warning">Dead</span><span class="text-white">pendency</span> is in beta. The focus is on improving and stablizing the system before making it available for purchase on private repositories.
 </p>
 
-<h4 class="text-info">How much will <span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> cost for private repositories?</h4>
+<h4>How much will <span class="text-warning">Dead</span><span class="text-white">pendency</span> cost for private repositories?</h4>
 <p>
   To be determined. It should be cheap though.
 </p>
