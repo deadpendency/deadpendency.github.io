@@ -30,9 +30,10 @@ sass:
 
 # Build settings
 markdown: kramdown
-# theme: minima
-# plugins:
-#   - jekyll-feed
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -42,8 +43,4 @@ exclude:
   - Gemfile.lock
   - auto
   - support
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+  - bin
