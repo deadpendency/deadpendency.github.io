@@ -1,0 +1,95 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: home
+---
+<div class="language-support-page">
+<h1 class="mb-4"><span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> Rules</h1>
+
+<p>
+  <span class="text-warning">Dead</span><span class="text-white"></span>pendency</span> performs the following checks. See <a href="/usage#configure-rules" target="_blank">rules usage</a> for details on using the rules config.
+</p>
+
+<p>Rules that perform checks against the source repository currently only support GitHub repositories. More git hosts are planned to be supported.</p>
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Rule</th>
+      <th scope="col">Description</th>
+      <th scope="col">Warn at</th>
+      <th scope="col">Fail at</th>
+      <th scope="col">Config</th>
+      <th scope="col">Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">No Recent Commit</td>
+      <td>No commits within X months.</td>
+      <td>3 months</td>
+      <td>6 months</td>
+      <td>
+        <pre><code class="language-yaml">no-recent-commit:
+  warn-at-months: 3
+  fail-at-months: 6
+        </code></pre>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">Few Yearly Commits</td>
+      <td>Few total commits for the past year.</td>
+      <td>4-6 commits</td>
+      <td>1-3 commits</td>
+      <td>
+        <pre><code class="language-yaml">few-yearly-commits:
+  warn-at-count: 6
+  fail-at-count: 3
+        </code></pre>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">No Recent Package Release</td>
+      <td>No package release within X months.</td>
+      <td>6 months</td>
+      <td>9 months</td>
+      <td>
+        <pre><code class="language-yaml">no-recent-package-release:
+  warn-at-months: 6
+  fail-at-months: 9
+        </code></pre>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">Repository Archived</td>
+      <td>The source repository has been <a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/archiving-repositories" target="_blank">archived</a>.</td>
+      <td>N/A</td>
+      <td>✅</td>
+      <td>N/A</td>
+      <td>Produces failure</td>
+    </tr>
+    <tr>
+      <th scope="row">Repository Is Fork</td>
+      <td>The source repository is a fork.</td>
+      <td>✅</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>Produces warning</td>
+    </tr>
+    <tr>
+      <th scope="row">Package Deprecated</td>
+      <td>The package is deprecated in the registry.</td>
+      <td>N/A</td>
+      <td>✅</td>
+      <td>N/A</td>
+      <td>Only <a href="https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions" target="_blank">Npm</a> and <a href="https://hackage.haskell.org/packages/deprecated" target="_blank">Hackage</a>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>More checks coming soon!</p>
+</div>
