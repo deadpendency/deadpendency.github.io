@@ -48,7 +48,7 @@ title: Deadpendency why
 
 <h3>Constant safeguarding against unhealthy dependencies</h3>
 
-<p><span class="text-warning">Dead</span><span class="text-white">pendency</span> is a <a href="https://docs.github.com/en/developers/apps/about-apps" target="_blank" rel="noopener">GitHub app</a> that runs a check against every push of code. This means over time, as maintenance works is done there are constant checks of dependency health. Continual checking here is important as dependencies that are healthy at a given point in time can be discontinued in the future.</p>
+<p><span class="text-warning">Dead</span><span class="text-white">pendency</span> is a <a href="https://docs.github.com/en/developers/apps/about-apps" target="_blank" rel="noopener">GitHub app</a> that runs a check against every push of code. This means over time, as maintenance work is done there are constant checks of dependency health. Continual checking here is important as dependencies that are healthy at a given point in time can be discontinued in the future.</p>
 
 <h3>Should I stop using 'dead' dependencies?</h3>
 
@@ -76,8 +76,8 @@ title: Deadpendency why
 
 <h3>A gatekeeper for healthy dependencies</h3>
 
-<p>Much like a code linting check, <span class="text-warning">Dead</span><span class="text-white">pendency</span> acts as a fast feedback mechanism when unhealthy dependencies are attempted to be added via a PR. This works because <span class="text-warning">Dead</span><span class="text-white">pendency</span> runs against an exact commit sha.</p>
+<p>Much like a code linting check, <span class="text-warning">Dead</span><span class="text-white">pendency</span> acts as a fast feedback mechanism when new unhealthy dependencies are proposed via a PR. This works because <span class="text-warning">Dead</span><span class="text-white">pendency</span> runs against an exact commit sha.</p>
 
-<p>In this way, <span class="text-warning">Dead</span><span class="text-white">pendency</span> can save developers time by blocking unhealthy dependencies. Or at least, prompting a justification to be included for their usage.</p>
+<p>In this way, <span class="text-warning">Dead</span><span class="text-white">pendency</span> can save developers time by automatically blocking unhealthy dependencies. Or at least, prompting a justification to be included for their usage.</p>
 
 </div>
