@@ -17,6 +17,7 @@ title: Deadpendency language support
       <th scope="col">Supported</th>
       <th scope="col">File Types</th>
       <th scope="col">Default Files Loaded</th>
+      <th scope="col">Registry Deprecation Support</th>
       <th scope="col">Notes</th>
     </tr>
   </thead>
@@ -26,6 +27,7 @@ title: Deadpendency language support
       <td>✅</td>
       <td><a href="https://docs.npmjs.com/files/package.json" target="_blank" rel="noopener">Npm package.json</a></td>
       <td><code>./package.json</code></td>
+      <td>✅</td>
       <td></td>
     </tr>
     <tr>
@@ -43,6 +45,7 @@ title: Deadpendency language support
           <li><code>./Pipfile</code></li>
         </ul>
       </td>
+      <td>❌</td>
       <td>Will not follow <code>requirements.txt</code> includes eg. <code>-r other-requirements.txt</code>.</td>
     </tr>
     <tr>
@@ -60,6 +63,7 @@ title: Deadpendency language support
           <li><code>./**/*.gemspec</code></li>
         </ul>
       </td>
+      <td>❌</td>
       <td><code>*.gemspec</code> search only goes 1 level deep. <code> <a href="https://github.com/deadpendency/deadpendency/issues/8" target="_blank" rel="noopener">Git blocks not yet supported.</a></td>
     </tr>
     <tr>
@@ -67,6 +71,7 @@ title: Deadpendency language support
       <td>✅</td>
       <td><a href="https://getcomposer.org/doc/01-basic-usage.md#composer-json-project-setup" target="_blank" rel="noopener">Composer file</a></td>
       <td><code>./composer.json</code></td>
+      <td>❌</td>
       <td>VCS dependencies <a href="https://github.com/deadpendency/deadpendency/issues/9" target="_blank" rel="noopener">not yet supported</a>.</td>
     </tr>
     <tr>
@@ -84,6 +89,7 @@ title: Deadpendency language support
           <li><code>./**/package.yaml</code></li>
         </ul>
       </td>
+      <td>✅</td>
       <td>Only searches 1 directory deep for dependency files. <a href="https://github.com/deadpendency/deadpendency/issues/11" target="_blank" rel="noopener">Stack</a> and <a href="https://github.com/deadpendency/deadpendency/issues/10" target="_blank" rel="noopener">cabal</a> git dependencies not currently supported. <a href="https://github.com/deadpendency/deadpendency/issues/12" target="_blank" rel="noopener">Multi package projects require some manual ignoring.</a></td>
     </tr>
     <tr>
@@ -91,6 +97,7 @@ title: Deadpendency language support
       <td>❌</td>
       <td></td>
       <td></td>
+      <td>✅</td>
       <td><a href="https://github.com/deadpendency/deadpendency/issues/1" target="_blank" rel="noopener">Planned</a></td>
     </tr>
     <tr>
@@ -98,6 +105,7 @@ title: Deadpendency language support
       <td>❌</td>
       <td></td>
       <td></td>
+      <td>❌</td>
       <td><a href="https://github.com/deadpendency/deadpendency/issues/2" target="_blank" rel="noopener">Planned</a></td>
     </tr>
     <tr>
@@ -105,6 +113,7 @@ title: Deadpendency language support
       <td>❌</td>
       <td></td>
       <td></td>
+      <td>❌</td>
       <td><a href="https://github.com/deadpendency/deadpendency/issues/4" target="_blank" rel="noopener">Maven does not reference source repositories</a>. This impacts all JVM based languages.</td>
     </tr>
     <tr>
@@ -112,11 +121,13 @@ title: Deadpendency language support
       <td>❌</td>
       <td></td>
       <td></td>
+      <td>❌</td>
       <td><a href="https://github.com/deadpendency/deadpendency/issues/3" target="_blank" rel="noopener">Currently no clear registry API to determine source repository</a>.</td>
     </tr>
     <tr>
       <th scope="row">Others</td>
       <td>❔</td>
+      <td></td>
       <td></td>
       <td></td>
       <td>If you want a language supported please <a href="https://github.com/deadpendency/deadpendency/issues/new" target="_blank" rel="noopener">open an issue</a>.</td>
