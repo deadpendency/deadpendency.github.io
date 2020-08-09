@@ -16,7 +16,7 @@ repo
 gemfile
 gemspec
 bundler
-nuget
+NuGet
 packagist
 hpack
 sha
@@ -25,6 +25,7 @@ vcs
 yaml
 jvm
 dependabot
+GitHub
 
 # Randoms
 
