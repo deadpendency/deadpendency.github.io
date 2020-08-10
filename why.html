@@ -3,81 +3,84 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
-title: Deadpendency why
+title: Why use Deadpendency?
 ---
 <div class="why-page">
 <h1 class="mb-4">Why Use <span class="text-warning">Dead</span><span class="text-white">pendency</span>?</h1>
 
-<h2>Updating dependencies is awesome</h2>
+<h2>tl;dr;</h2>
 
-<h3>Minimal effort, large value</h3>
+<p>
+  <ul>
+    <li>Dependency updates are a chore, but are essential over the long term.</li>
+    <li>The best way to manage these updates, is to <a href="https://www.netcetera.com/home/stories/expertise/20170406-software-updates-inside-it.html" target="_blank" rel="noopener">proactively keep dependencies up to date</a>.</li>
+    <li>Thankfully, there are amazing <a href="https://dependabot.com/" target="_blank" rel="noopener">automated dependency update tools</a>.</li>
+    <li>There is a gap though, a dependency that has become a dead project will never have another update released. A 'dead' dependency has the same downsides as an un-updated dependency.</li>
+    <li><span class="text-warning">Dead</span><span class="text-white">pendency</span> is a tool to report on and alert when your dependencies become unhealthy software projects.</li>
+    <li>This automates what is currently a manual and ongoing process (or oft neglected) to enable maximum dependency health. <span class="text-warning">Dead</span><span class="text-white">pendency</span> should be used in conjunction with automated dependency update tools.</li>
+  </ul>
+</p>
 
-<p>With a few keystrokes a developer can bump an application dependency version. For this effort, they (likely) improve the quality of their software.</p>
+<h2>Software dependency updates are essential</h2>
 
-<p>In some cases dependencies have breaking changes and more effort is required to upgrade. However, these bigger upgrades typically provide greater value (ie. a simpler, easy to use API). In this case updating a dependency is still usually an excellent pay off for the time investment.</p>
+<p>
+  <ul>
+    <li>A given release of an application works for a given set of dependencies and for a given platform. While the application code will not change, the dependencies and platforms continue to change introducing incompatibilities. This process is often referred to as <a href="https://en.wikipedia.org/wiki/Software_rot" target="_blank" rel="noopener">bitrot</a>.</li>
+    <li>Bitrot is especially prevalent in modern software development, with most programming languages and other platforms having major updates yearly if not more frequently. The whole ecosystem including applications need to keep pace.</li>
+  </ul>
+</p>
 
-<h3>Dependency updates are mandatory</h3>
+<h2>Dependencies should be regularly and automatically updated</h2>
 
-<p>In the modern world of software development, there is constant platform churn. Most major programming languages release major updates every year. Beyond programming languages, there is an array of platforms modern software depends on. There are also inter-dependencies between an application's dependencies, making freezing any one to a particular version difficult.</p>
+<p>
+  <ul>
+    <li>To avoid application code falling behind platform and dependency churn, updates should be regularly applied.</li>
+    <li>Avoidance of dependency updates leads to large 'big bang' updates which are more risky and time consuming.</li>
+    <li>Ideally, the dependency update process should be <a href="https://dependabot.com" target="_blank" rel="noopener">automated as much as possible</a>.</li>
+  </ul>
+</p>
 
-<p>The question is how long can dependency updates be delayed before it becomes a problem. Once significantly delayed, updating can becoming much more difficult and time consuming. In some cases if left too long an application can become undeployable without doing these updates, as dependent platforms have been discontinued.</p>
+<h2>Dependencies sometimes will become 'dead' projects</h2>
 
-<h3>Amazing dependency update tools</h3>
+<p>
+  <ul>
+    <li>In open source, projects will sometimes become inactive, or be superseded.</li>
+    <li>A 'dead' dependency locks you into an ageing version that again subjects the application to the problems of bitrot. However, automated dependency update tools will not alert you of this issue, as the application is on the latest version.</li>
+    <li>Thus, so be in the best possible state around dependencies, you need to be updating dependencies AND checking dependencies are still being actively maintained and released.</li>
+  </ul>
+</p>
 
-<p>Dependency updates are important, but can be time consuming keeping up to date with many dependencies.</p>
+<h2>Dependency project health tracking is currently manual</h2>
 
-<p>Thankfully there are excellent tools for keeping dependencies up to date such as <a href="https://dependabot.com/" target="_blank" rel="noopener">Dependabot</a>.</p>
+<p>
+  <ul>
+    <li>Dependency project health tracking is currently a manual process. It involves keeping abreast of these projects and checking that there are still regular commits and releases.</li>
+    <li>The process is ongoing as what is a healthy dependency now may become inactive in the future.</li>
+    <li>Due to time consuming effort of this health tracking, it is oft neglected and applications will unknowingly depend on 'dead' dependencies.</li>
+    <li>Sometimes applications need to depend on inactive dependencies as there are no viable alternatives. However, in some cases there are excellent alternatives and this is when dependency project health tracking provides the most value.</li>
+  </ul>
+</p>
 
-<h2>Dependency update tools have a gap</h2>
+<h2><span class="text-warning">Dead</span><span class="text-white">pendency</span> automatically tracks and alerts on project health</h2>
 
-<h3>Open source projects often become inactive</h3>
+<p>
+  <ul>
+    <li><span class="text-warning">Dead</span><span class="text-white">pendency</span> automatically checks dependency project health upon every git push.</li>
+    <li>It enables developers to be informed about dependencies that have become inactive so they can make informed choices.</li>
+    <li>The check is ongoing. As an application is worked on and git pushes made, the <span class="text-warning">Dead</span><span class="text-white">pendency</span> check is continually run.</li>
+    <li>Any unhealthy dependencies will fail the check, alerting developers to the issue with minimal effort required.</li>
+  </ul>
+</p>
 
-<p>In open source, projects often become inactive. Usually development is ceased and they sit <a href="https://en.wikipedia.org/wiki/Software_rot" target="_blank" rel="noopener">bit rotting</a>, or might slowly trickle along, but will never get new features. In some cases the dependency will be explicitly discontinued.</p>
+<h2>Other benefits of <span class="text-warning">Dead</span><span class="text-white">pendency</span></h2>
 
-<p>This isn’t necessarily a bad thing. Sometimes a library explores a new approach, the community learns from it, but ultimately this was not the end game solution. A new library can be developed with the better hindsight and the cycle continues.</p>
-
-<h3>Automated dependency tools ignore activity</h3>
-
-<p>Dependencies that are dead or are on life support will either never have a new version released, or very infrequently. This is the gap in the automated dependency update approach as these tools do not alert you of such a problem.</p>
-
-<p>When you depend upon an inactive dependency, you are getting all the same downsides of never updating a dependency. Thus, to be in the best possible spot around dependencies, you need know your dependencies are actively being updated and released <strong>and</strong> be on the latest version.</p>
-
-<p>This is not a flaw in automated dependency updating, which is excellent value to set up. It just means a different but related tool is needed like <span class="text-warning">Dead</span><span class="text-white">pendency</span> for maximal dependency health.
-
-<h2><span class="text-warning">Dead</span><span class="text-white">pendency</span> to the rescue</h2>
-
-<h3>Constant safeguarding against unhealthy dependencies</h3>
-
-<p><span class="text-warning">Dead</span><span class="text-white">pendency</span> is a <a href="https://docs.github.com/en/developers/apps/about-apps" target="_blank" rel="noopener">GitHub app</a> that runs a check against every push of code. This means over time, as maintenance work is done there are constant checks of dependency health. Continual checking here is important as dependencies that are healthy at a given point in time can be discontinued in the future.</p>
-
-<h3>Should I stop using 'dead' dependencies?</h3>
-
-<p>Inactive dependencies will bit rot and fall behind with the platform churn of modern software development. They are 'not optimal' to use.</p>
-
-<p>However, sometimes you don't have a choice. There may be no alternative, or active alternatives have key flaws for your use case. <span class="text-warning">Dead</span><span class="text-white">pendency</span> <strong>doesn’t</strong> imply you should never use dependencies that are 'dead'. Rather, it is there to make the choice a conscious and deliberate one.</p>
-
-<p>Of course, in some cases there is a healthy alternative and indeed it should be switched to. This is the case where <span class="text-warning">Dead</span><span class="text-white">pendency</span> provides the most value.</p>
-
-<h2>Other benefits</h2>
-
-<h3>Protection against depending on forks</h3>
-
-<p>A common issue with using open source dependencies is dealing with bugs. In this case often the dependency will be forked and the fork used as a <a href="https://docs.npmjs.com/files/package.json#git-urls-as-dependencies" target="_blank" rel="noopener">git dependency</a> for a quick fix. Meanwhile, the fix is proposed via PR to the upstream repository. This can involve a lot of back and forth and delay before being merged and then released in a new version.</p>
-
-<p>In this case dependency update tools (most of them at least) will then ignore new versions of the dependency, as it must assume the git dependency is still required. This means the developers need to remember to come back and un-depend on the fork. With <span class="text-warning">Dead</span><span class="text-white">pendency</span> the dependency immediately gets a warning as a forked repo. If overtime, it is left in place, the fork will not be getting commits and thus gets flagged as inactive.</p>
-
-<p>An inactive dependency fails the check, so developers will be clearly reminded to revisit this fork usage.</p>
-
-<h3>A snapshot of dependency health</h3>
-
-<p><span class="text-warning">Dead</span><span class="text-white">pendency</span> flags dependencies that are quite unhealthy. It also flags dependencies with warnings that are starting to become unhealthy. This means at any time the <span class="text-warning">Dead</span><span class="text-white">pendency</span> report can be reviewed for a quick snapshot of dependency health.</p>
-
-<p>The <span class="text-warning">Dead</span><span class="text-white">pendency</span> report includes links to the dependency package and source repository enabling further review.</p>
-
-<h3>A gatekeeper for healthy dependencies</h3>
-
-<p>Much like a code linting check, <span class="text-warning">Dead</span><span class="text-white">pendency</span> acts as a fast feedback mechanism when new unhealthy dependencies are proposed via a PR. This works because <span class="text-warning">Dead</span><span class="text-white">pendency</span> runs against an exact commit sha.</p>
-
-<p>In this way, <span class="text-warning">Dead</span><span class="text-white">pendency</span> can save developers time by automatically blocking unhealthy dependencies. Or at least, prompting a justification to be included for their usage.</p>
+<p>
+  <ul>
+    <li>Each push produces a dependency project health report (in the form of a GitHub check run, see <a href="https://github.com/deadpendency/deadpendency-example/pull/1/checks" target="_blank" rel="noopener">this example</a>).</li>
+    <li>The report gives a quick snapshot of dependency project health, including links to the package and the source repository. Dependencies that are becoming unhealthy will have warnings, but will not fail the check.</li>
+    <li>A common pitfall with dependencies is when a dependency has a bug. The quickest way to fix it is to fork the dependency, fix it and have your application depend upon the fork. However, often developers will forget to switch back to the unforked dependency once the fix has been upstreamed. Dependency update tools will not alert in this case, but <span class="text-warning">Dead</span><span class="text-white">pendency</span> will alert (over time) as the fork will be inactive. Depending on forks also produces a warning.</li>
+    <li><span class="text-warning">Dead</span><span class="text-white">pendency</span> gives fast feedback for PRs. If an unhealthy dependency is added, the PR will fail the <span class="text-warning">Dead</span><span class="text-white">pendency</span> check. This prompts the submitter to take action (select an alternative dependency or justify the unhealthy dependencies' usage) without any effort required from the maintainers.</li>
+  </ul>
+</p>
 
 </div>
