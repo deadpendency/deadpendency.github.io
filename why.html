@@ -44,7 +44,7 @@ title: Why use Deadpendency?
 <h2>Dependencies sometimes will become 'dead' projects</h2>
 
 <p>
-  In open source, projects will sometimes become inactive, or be superseded. A 'dead' dependency locks you into an ageing version that again subjects the application to the problems of bitrot.
+  In open source, projects will sometimes become inactive, or be superseded. A 'dead' dependency locks you into an aging version that again subjects the application to the problems of bitrot.
 </p>
 
 <p>
@@ -84,14 +84,14 @@ title: Why use Deadpendency?
   Each push produces a dependency project health report (in the form of a GitHub check run, see <a href="https://github.com/deadpendency/deadpendency-example/pull/1/checks" target="_blank" rel="noopener">this example</a>). The report gives a quick snapshot of dependency project health, including links to the package and the source repository to enable additional review. Dependencies that are becoming unhealthy will have warnings, but will not fail the check.
 </p>
 
-<h3>Fast feedback on PRs</h3>
+<h3>Fast feedback on pull requests</h3>
 
 <p>
-  <span class="text-warning">Dead</span><span class="text-white">pendency</span> will run when a PR is submitted. This means that if the PR adds a new dependency, it will automatically have its project health checked.
+  <span class="text-warning">Dead</span><span class="text-white">pendency</span> will run when a pull request is submitted. This means that if the pull request adds a new dependency, it will automatically have its project health checked.
 </p>
 
 <p>
-  In the scenario where the dependency is not being healthily maintained, this is flagged in the report. Thus the submitter is prompted to either select some alternative, or justify the unhealthy dependency's inclusion. This aleviates the PR reviewers from manually doing this assessment and giving the feedback.
+  In the scenario where the dependency is not being healthily maintained, this is flagged in the report. Thus the submitter is prompted to either select some alternative, or justify the unhealthy dependency's inclusion. This alleviates the pull request reviewers from manually doing this assessment and giving the feedback.
 </p>
 
 <h3>Avoid depending on old forked dependencies</h3>
