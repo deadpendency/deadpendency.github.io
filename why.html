@@ -8,16 +8,15 @@ title: Why use Deadpendency?
 <div class="why-page">
 <h1 class="mb-4">Why Use <span class="text-warning">Dead</span><span class="text-white">pendency</span>?</h1>
 
-<h2>tl;dr;</h2>
+<h2>TL;DR</h2>
 
 <p>
   <ul>
-    <li>Dependency updates are a chore, but are essential over the long term.</li>
-    <li>The best way to manage these updates, is to <a href="https://www.netcetera.com/home/stories/expertise/20170406-software-updates-inside-it.html" target="_blank" rel="noopener">proactively keep dependencies up to date</a>.</li>
+    <li>Dependency updates are a chore, but are essential over the long term. The best way to manage these updates, is to <a href="https://www.netcetera.com/home/stories/expertise/20170406-software-updates-inside-it.html" target="_blank" rel="noopener">proactively keep dependencies up to date</a>.</li>
     <li>Thankfully, there are amazing <a href="https://dependabot.com/" target="_blank" rel="noopener">automated dependency update tools</a>.</li>
     <li>There is a gap though, a dependency that has become a dead project will never have another update released. A 'dead' dependency has the same downsides as an un-updated dependency.</li>
-    <li><span class="text-warning">Dead</span><span class="text-white">pendency</span> is a tool to report on and alert when your dependencies become unhealthy software projects. For example, the project becomes inactive, or is deprecated.</li>
-    <li>This automates what is currently a manual and ongoing process (or oft neglected) to enable maximum dependency health. <span class="text-warning">Dead</span><span class="text-white">pendency</span> should be used in conjunction with automated dependency update tools.</li>
+    <li><strong><span class="text-warning">Dead</span><span class="text-white">pendency</span> is a tool to report on and alert when your dependencies become unhealthy software projects.</strong> For example, the project becomes inactive, or is deprecated.</li>
+    <li>This automates what is currently an ongoing manual process (or oft neglected) to enable maximum dependency health. <span class="text-warning">Dead</span><span class="text-white">pendency</span> should be used in conjunction with automated dependency update tools.</li>
   </ul>
 </p>
 
@@ -48,7 +47,7 @@ title: Why use Deadpendency?
 </p>
 
 <p>
-  However, automated dependency update tools will not alert you of this issue, as the application is on the latest version. Thus, so be in the best possible state around dependencies, you need to be updating dependencies AND checking dependencies are still being actively maintained and released.
+  However, automated dependency update tools will not alert you to this issue, as the application is already on the latest version. Thus, to be in the best possible state around dependencies, you need to be updating dependencies AND checking dependencies are still being actively maintained and released.
 </p>
 
 <h2>Dependency project health tracking is currently manual</h2>
@@ -97,7 +96,7 @@ title: Why use Deadpendency?
 <h3>Avoid depending on old forked dependencies</h3>
 
 <p>
-  In some cases, a dependency will have a bug. The quickest way to deal with this is usually to fork the dependency and fix the bug. Then the application can depend upon the forked version, without requiring any assistance from the dependency's developers.
+  In some cases, a dependency will have a bug. The quickest way to deal with this is usually to <a href="https://docs.github.com/en/github/getting-started-with-github/fork-a-repo" target="_blank" rel="noopener">fork</a> the dependency and fix the bug. Then the application can depend upon the forked version, without requiring any assistance from the dependency's developers.
 </p>
 
 <p>
