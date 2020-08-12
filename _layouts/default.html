@@ -58,6 +58,7 @@
     <script>hljs.initHighlightingOnLoad();</script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175234743-1"></script>
+    {% if jekyll.environment == 'production' %}
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -65,5 +66,6 @@
 
       gtag('config', 'UA-175234743-1');
     </script>
+    {% endif %}
   </body>
 </html>
