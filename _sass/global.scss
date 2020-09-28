@@ -124,6 +124,13 @@ h2 {
   margin-bottom: 20px;
 }
 
+h2, h3, h4 {
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
 .language-support svg {
   background-size: 30px 30px;
 }
