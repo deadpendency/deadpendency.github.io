@@ -8,25 +8,23 @@ title: Deadpendency usage
 <div class="faq-page">
 <h1 class="mb-4"><span class="text-warning">Dead</span><span class="text-white">pendency</span> Usage</h1>
 
+<h2>Example</h2>
+
+<p>See <a href="https://github.com/deadpendency/deadpendency-example" target="_blank" rel="noopener">https://github.com/deadpendency/deadpendency-example</a> for a detailed example of using <span class="text-warning">Dead</span><span class="text-white">pendency</span>.</p>
+
 <h2>Installation</h2>
 
 <p>
   Go to the <a href="https://github.com/marketplace/deadpendency" target="_blank" rel="noopener">Deadpendency app on GitHub marketplace</a> and install it. Select which repositories to install the GitHub app on.
 </p>
 
-<h2>Example</h2>
-
-<p>See <a href="https://github.com/deadpendency/deadpendency-example" target="_blank" rel="noopener">https://github.com/deadpendency/deadpendency-example</a> for a detailed example of using <span class="text-warning">Dead</span><span class="text-white">pendency</span>.</p>
-
-<h2>Feedback</h2>
-
-<p>If you get any unexpected behavior, or if you want a specific feature, please give feedback via <a href="https://github.com/deadpendency/deadpendency/issues" target="_blank" rel="noopener">this GitHub repository</a>.</p>
-
 <h2>Usage</h2>
 
-<p>Deadpendency will automatically search for dependency files based on the language GitHub has assigned to your repository.</p>
+<p>Once installed in a repository, the <span class="text-warning">Dead</span><span class="text-white">pendency</span> check will run on (the newest commit of) every git push.</p>
 
-<p>Refer to <a href="/language-support">language support</a> for information on what dependency files are supported.</p>
+<p><span class="text-warning">Dead</span><span class="text-white">pendency</span> will automatically search for dependency files based on the top 2 languages in use on your GitHub repository. It will then check the dependencies for project health and produce the <span class="text-warning">Dead</span><span class="text-white">pendency</span> report (<a href="https://github.com/deadpendency/deadpendency-example/pull/1/checks" target="_blank" rel="noopener">see example</a>). Unhealthy dependencies will trigger a check failure.</p>
+
+<p>Refer to <a href="/language-support">language support</a> for information on what dependency files are supported and automatically loaded.</p>
 
 <h3>Configuration</h3>
 
@@ -37,7 +35,7 @@ title: Deadpendency usage
 <h4 id="additional-dependency-files">Additional Dependency Files</h4>
 
 <p>
-  In some cases you have additional, or different dependency files to load than the default ones. These can be loaded like:
+  In some cases you have additional, or different dependency files to load than <a href="/language-support">the default ones</a>. These can be loaded like:
 </p>
 
 <pre><code class="language-yaml">additional-dependency-files:
@@ -66,11 +64,32 @@ title: Deadpendency usage
 
 <pre><code class="language-yaml">additional-deps:
   javascript:
+    # additional deps found in the package registry
     - react
     - react-dom
+
+    # direct repository dependencies
+    - repo: jquery/jquery
+    # name can be included so Deadpendency can load the package details in the registry
     - name: random-on-github
       repo: some-org/super-random
+
+  # unsupported languages can still have additional repository dependencies
+  cool-lang:
+  - name: cool-dep
+    repo: cool/dep
+
 </code></pre>
+
+<p>Language Keywords:
+  <ul>
+    <li><code>javascript</code></li>
+    <li><code>php</code></li>
+    <li><code>python</code></li>
+    <li><code>ruby</code></li>
+    <li><code>haskell</code></li>
+  </ul>
+</p>
 
 <h4 id="ignore-dependencies">Ignore Dependencies</h4>
 
@@ -95,5 +114,9 @@ title: Deadpendency usage
 </code></pre>
 
 <p>See <a href="/rules">rules</a> for detailed information on rules and defaults.</p>
+
+<h2>Feedback</h2>
+
+<p>If you get any unexpected behavior, or if you want a specific feature, please give feedback via <a href="https://github.com/deadpendency/deadpendency/issues" target="_blank" rel="noopener">this GitHub repository</a>.</p>
 
 </div>
