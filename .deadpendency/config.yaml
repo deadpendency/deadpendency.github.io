@@ -1,3 +1,0 @@
-additional-dependency-files:
-  - path: Gemfile
-    type: bundler-gemfile
