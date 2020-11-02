@@ -95,10 +95,19 @@ title: Deadpendency language support
     </tr>
     <tr>
       <th scope="row">.NET</td>
-      <td>❌</td>
-      <td></td>
-      <td></td>
-      <td><a href="https://github.com/deadpendency/deadpendency/issues/1" target="_blank" rel="noopener">Planned</a></td>
+      <td>✅</td>
+      <td>
+        <ul>
+          <li><a href="https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files" target="_blank" rel="noopener"><code>PackageReference</code> in project files</a></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><code>./**/*.csproj</code></li>
+          <li><code>./**/*.vbproj</code></li>
+        </ul>
+      </td>
+      <td>Only searches 1 directory deep for dependency files. <code>packages.config</code> format is not supported.</td>
     </tr>
     <tr>
       <th scope="row">Java</td>
