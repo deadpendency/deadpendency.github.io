@@ -111,10 +111,39 @@ title: Deadpendency language support
     </tr>
     <tr>
       <th scope="row">Java</td>
-      <td>❌</td>
-      <td></td>
-      <td></td>
-      <td><a href="https://github.com/deadpendency/deadpendency/issues/4" target="_blank" rel="noopener">Maven does not reference source repositories</a>. This impacts all JVM based languages.</td>
+      <td>✅</td>
+      <td>
+        <ul>
+          <li><a href="https://maven.apache.org/guides/introduction/introduction-to-the-pom.html" target="_blank" rel="noopener">Maven pom.xml</a></li>
+          <li><a href="https://docs.gradle.org/current/userguide/tutorial_using_tasks.html" target="_blank" rel="noopener">Gradle Build File</a></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><code>./**/pom.xml</code></li>
+          <li><code>./**/build.gradle</code></li>
+        </ul>
+      </td>
+      <td>Only searches 1 directory deep for dependency files.</td>
+    </tr>
+    <tr>
+      <th scope="row">Kotlin</td>
+      <td>✅</td>
+      <td>
+        <ul>
+          <li><a href="https://maven.apache.org/guides/introduction/introduction-to-the-pom.html" target="_blank" rel="noopener">Maven pom.xml</a></li>
+          <li><a href="https://docs.gradle.org/current/userguide/tutorial_using_tasks.html" target="_blank" rel="noopener">Gradle Build File</a></li>
+          <li><a href="https://docs.gradle.org/current/userguide/kotlin_dsl.html" target="_blank" rel="noopener">Gradle Kotlin DSL File</a></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><code>./**/pom.xml</code></li>
+          <li><code>./**/build.gradle</code></li>
+          <li><code>./**/build.gradle.kts</code></li>
+        </ul>
+      </td>
+      <td>Only searches 1 directory deep for dependency files.</td>
     </tr>
     <tr>
       <th scope="row">Go</td>
