@@ -120,11 +120,14 @@ title: Deadpendency usage
 
 <pre><code class="language-yaml">rules-config:
   no-recent-package-release:
-    # warn-at-months: 6 - omitted to use the default
-    error-at-months: 12
-  no-recent-commit:
     warn-at-months: 6
-    error-at-months: 12
+    # fail-at-months: 18  - omitted to use the default
+  no-recent-commit:
+    warn-at-months: 3
+    fail-at-months: 6
+  few-yearly-commits:
+    warn-at-count: 12
+    fail-at-count: 6
 </code></pre>
 
 <p>See <a href="/rules">rules</a> for detailed information on rules and defaults.</p>
