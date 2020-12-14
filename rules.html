@@ -33,36 +33,37 @@ title: Deadpendency rules
     <tr>
       <th scope="row">No Recent Commit</td>
       <td>No commits within X months.</td>
-      <td>9 months</td>
       <td>12 months</td>
+      <td>18 months</td>
       <td>
         <pre><code class="language-yaml">no-recent-commit:
-  warn-at-months: 9
-  fail-at-months: 12</code></pre>
+  warn-at-months: 12
+  fail-at-months: 18</code></pre>
       </td>
       <td>Cannot be configured to more than 24 months.</td>
     </tr>
     <tr>
       <th scope="row">Few Yearly Commits</td>
       <td>Few total commits for the past year.</td>
-      <td>2-3 commits</td>
-      <td>1 commit</td>
+      <td>1-2 commits</td>
+      <td>Disabled by default</td>
       <td>
         <pre><code class="language-yaml">few-yearly-commits:
-  warn-at-count: 3
-  fail-at-count: 1</code></pre>
+  warn-at-count: 2
+  # disabled unless provided
+  # fail-at-count: 1</code></pre>
       </td>
       <td></td>
     </tr>
     <tr>
       <th scope="row">No Recent Package Release</td>
       <td>No package release within X months.</td>
-      <td>12 months</td>
       <td>18 months</td>
+      <td>24 months</td>
       <td>
         <pre><code class="language-yaml">no-recent-package-release:
-  warn-at-months: 12
-  fail-at-months: 18</code></pre>
+  warn-at-months: 18
+  fail-at-months: 24</code></pre>
       </td>
       <td></td>
     </tr>
