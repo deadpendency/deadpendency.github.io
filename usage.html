@@ -120,17 +120,41 @@ title: Deadpendency usage
 
 <p>Each language ecosystem is different. What might be considered unhealthy for a JavaScript dependency may be fine in a more niche language.</p>
 
+<h5>The default config</h5>
+
+<pre><code class="language-yaml">rules-config:
+  no-recent-package-release:
+    warn-at-months: 18
+    fail-at-months: 24
+  no-recent-commit:
+    warn-at-months: 12
+    fail-at-months: 18
+  few-yearly-commits:
+    warn-at-count: 2
+    fail-at-count: false # does not fail by default
+
+  # these are simply true / false for enable / disable
+  repository-archived: true
+  repository-is-fork: true
+  package-deprecated: true
+  single-recent-author: true
+</code></pre>
+
+<h5>Customise the config</h5>
+
+<p>Unless a <code>rules-config</code> is provided, the defaults above are used. Settings can be overriden as per the below.</p>
+
 <pre><code class="language-yaml">rules-config:
   no-recent-package-release:
     warn-at-months: 6
-    # fail-at-months: 18  - omitted to use the default
+    # fail-at-months: 24  - omitted to use the default
   no-recent-commit:
     warn-at-months: 3
-    fail-at-months: 6
-  few-yearly-commits:
-    warn-at-count: 12
-    # few-yearly-commits only warns by default, unless fail-at-count is set
-    fail-at-count: 6
+    fail-at-months: false # setting to false disables the failure check
+
+  few-yearly-commits: false # or an entire check can be disabled
+
+  single-recent-author: false # disable this check too
 </code></pre>
 
 <p>Note: the defaults may be adjusted from time to time.</p>
