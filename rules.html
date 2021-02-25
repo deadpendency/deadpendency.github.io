@@ -13,7 +13,7 @@ title: Deadpendency rules
 </p>
 
 <p>
-  The default settings are designed to be quite permissive and non-noisy. For more active ecosystems, you may wish to adjust the defaults. See <a href="/usage#configure-checks" target="_blank" rel="noopener">rules usage</a> for details on using the rules config.
+  The default settings are designed to be quite permissive and non-noisy. For more active ecosystems, you may wish to adjust the defaults. See <a href="/usage#configure-rules" target="_blank" rel="noopener">rules usage</a> for details on using the rules config.
 </p>
 
 <p>Rules that perform checks against the source repository currently only support GitHub repositories. More git hosts are planned to be supported.</p>
@@ -52,8 +52,8 @@ title: Deadpendency rules
       <td>
         <pre><code class="language-yaml">few-yearly-commits:
   warn-at-count: 2
-  # disabled by default
-  fail-at-count: false</code></pre>
+  # disabled unless provided
+  # fail-at-count: 1</code></pre>
       </td>
       <td></td>
     </tr>
@@ -74,9 +74,7 @@ title: Deadpendency rules
       <td>The source repository has been <a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/archiving-repositories" target="_blank" rel="noopener">archived</a>.</td>
       <td>N/A</td>
       <td>✅</td>
-      <td>
-        <pre><code class="language-yaml">repository-archived: true</code></pre>
-      </td>
+      <td>N/A</td>
       <td>Produces failure.</td>
     </tr>
     <tr>
@@ -84,9 +82,7 @@ title: Deadpendency rules
       <td>The source repository is <a href="https://docs.github.com/en/github/getting-started-with-github/fork-a-repo" target="_blank" rel="noopener">a fork</a>.</td>
       <td>✅</td>
       <td>N/A</td>
-      <td>
-        <pre><code class="language-yaml">repository-is-fork: true</code></pre>
-      </td>
+      <td>N/A</td>
       <td>Produces warning.</td>
     </tr>
     <tr id="package-deprecated">
@@ -94,9 +90,7 @@ title: Deadpendency rules
       <td>The package is deprecated (or flagged as abandoned) in the registry.</td>
       <td>N/A</td>
       <td>✅</td>
-      <td>
-        <pre><code class="language-yaml">package-deprecated: true</code></pre>
-      </td>
+      <td>N/A</td>
       <td>Only <a href="https://docs.npmjs.com/deprecating-and-undeprecating-packages-or-package-versions" target="_blank" rel="noopener">Npm</a>, <a href="https://hackage.haskell.org/packages/deprecated" target="_blank" rel="noopener">Hackage</a>, <a href="https://docs.microsoft.com/en-us/nuget/nuget-org/deprecate-packages" target="_blank" rel="noopener">NuGet</a> and <a href="https://getcomposer.org/doc/04-schema.md#abandoned" target="_blank" rel="noopener">Packagist</a>.</td>
     </tr>
     <tr>
@@ -104,9 +98,7 @@ title: Deadpendency rules
       <td>All the commits in the last year were authored by a single person.</td>
       <td>✅</td>
       <td>N/A</td>
-      <td>
-        <pre><code class="language-yaml">single-recent-author: true</code></pre>
-      </td>
+      <td>N/A</td>
       <td>Produces warning.</td>
     </tr>
   </tbody>
