@@ -13,13 +13,27 @@ title: Deadpendency frequently asked questions
 
 <h4>If a dependency is marked as unhealthy, should I stop using it?</h4>
 <p>No! This is a call to action to review the dependency and make a decision as to whether to switch away or not.</p>
-<p>In many cases it makes sense to keep using the dependency (eg. there are no viable alternatives). In this case, the dependency can be ignored from deadpendency checks.</p>
+<p>In many cases it makes sense to keep using the dependency (eg. there are no viable alternatives). In this case, the dependency can be ignored from <span class="text-warning">Dead</span><span class="text-white">pendency</span> checks.</p>
 
 <h4>Why isn’t Other language supported?</h4>
 <p>Support is either not possible, planned, or the language is considered too niche. Feel free to create / up vote the <a href="https://github.com/deadpendency/deadpendency/issues?q=is%3Aissue+is%3Aopen+label%3Alanguage-support" target="_blank" rel="noopener">relevant issue</a>.</p>
 
 <h4>Which package registries support structured deprecation?</h4>
 <p>Currently NPM (JavaScript), NuGet (.NET), Hackage (Haskell) and Packagist (PHP).</p>
+
+<h4>Does <span class="text-warning">Dead</span><span class="text-white">pendency</span> support GitLab, BitBucket, Other?</h4>
+<p>
+  No, <span class="text-warning">Dead</span><span class="text-white">pendency</span> is currently a GitHub.com app and it can only analyze dependencies that are also hosted on GitHub.com.
+</p>
+
+<p>
+  However, the <span class="text-warning">Dead</span><span class="text-white">pendency</span> app will support GitLab and Bitbucket in the future, both in terms of an app and as hosts of dependency repositories.
+</p>
+
+<h4>Does <span class="text-warning">Dead</span><span class="text-white">pendency</span> have an on-prem solution?</h4>
+<p>
+  No, not currently. This is eventually planned, but would come after supporting GitLab and Bitbucket as mentioned above.
+</p>
 
 <h4>Why isn’t <span class="text-warning">Dead</span><span class="text-white">pendency</span> open source?</h4>
 <p>The plan is to charge for <span class="text-warning">Dead</span><span class="text-white">pendency</span> for closed source repositories. However, as much <span class="text-warning">Dead</span><span class="text-white">pendency</span> code as possible with be open sourced.</p>
