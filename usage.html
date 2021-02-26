@@ -131,13 +131,13 @@ title: Deadpendency usage
     fail-at-months: 18
   few-yearly-commits:
     warn-at-count: 2
-    fail-at-count: false # does not fail by default
+    fail-at-count: disabled # does not fail by default
 
-  # these are simply true / false for enable / disable
-  repository-archived: true
-  repository-is-fork: true
-  package-deprecated: true
-  single-recent-author: true
+  # these can be 'disabled', 'warn' or 'fail'
+  repository-archived: fail
+  repository-is-fork: warn
+  package-deprecated: fail
+  single-recent-author: warn
 </code></pre>
 
 <h5>Customise the config</h5>
@@ -150,11 +150,13 @@ title: Deadpendency usage
     # fail-at-months: 24  - omitted to use the default
   no-recent-commit:
     warn-at-months: 3
-    fail-at-months: false # setting to false disables the failure check
+    fail-at-months: disabled # disable the failure threshhold
 
-  few-yearly-commits: false # or an entire check can be disabled
+  few-yearly-commits: disabled # or an entire check can be disabled
 
-  single-recent-author: false # disable this check too
+  single-recent-author: disabled # disable this check too
+
+  repository-is-fork: fail # this warns by default, but we want it to fail instead
 </code></pre>
 
 <p>Note: the defaults may be adjusted from time to time.</p>
