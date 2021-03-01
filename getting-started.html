@@ -20,7 +20,8 @@ title: Deadpendency Getting Started
   <li>Push a commit to your repository. This could be a <a href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests">pull request</a> (PR).</li>
   <li>The top 2 programming languages used in your repostiory are identified.</li>
   <li>The <a href="/language-support">default dependency files</a> of these programming languages are read.</li>
-  <li>The dependencies are assessed.</li>
+  <li>Additional dependencies, or dependency files can be loaded via config.</li>
+  <li>The dependencies are assessed for project health.</li>
   <li><a href="https://github.com/deadpendency/deadpendency-example/pull/1/checks">A report</a> is produced. The 'check' will fail if the dependencies are not healthy.</li>
 </ol>
 
@@ -55,7 +56,7 @@ title: Deadpendency Getting Started
 </p>
 
 <p>
-  Warnings serve to provide a quick report on dependencies that may become problematic in the future. It is recommended you configure (LINK ME) your failure thresholds so that only when the check fails does it a mean a dependency is unhealthy enough that it should be reviewed.
+  Warnings serve to provide a quick report on dependencies that may become problematic in the future. It is recommended you configure (LINK ME) your failure thresholds so that only when the check fails does it mean a dependency is unhealthy enough that it should be reviewed.
 </p>
 
 <h3>The Check Fails</h3>
@@ -83,21 +84,21 @@ title: Deadpendency Getting Started
 </p>
 
 <p>
-  It is recommended that you tune the checks so that when failures happen, the dependency is definitely unhealthy enough to consider switching away.
+  It is recommended that you tune the checks so that failures are rare. Thus when they do happen, you know it is worth your attention to assess the dependency.
 </p>
 
 <h4>Switch to an alternative</h4>
 
 <p>
-  If a dependency is not actively maintained, then ideally you want to switch to a dependency which is.
+  Ideally, if a dependency is no longer going to be well maintained, you should switch to an alternative that is well maintained. The most clear cut cases are when dependency X is deprecated in favor of dependency Y.
 </p>
 
 <h2>Using <span class="text-warning">Dead</span><span class="text-white">pendency</span> Long Term</h2>
 
 <p>
-  It is recommended to keep your <span class="text-warning">Dead</span><span class="text-white">pendency</span> passing, by ignoring or switching away from 'dead' dependencies.
+  It is recommended to keep your <span class="text-warning">Dead</span><span class="text-white">pendency</span> check passing, by ignoring or switching away from 'dead' dependencies.
 </p>
 
 <p>
-  Then, as you work on your project and push commits, <span class="text-warning">Dead</span><span class="text-white">pendency</span> will monitor your dependency health. You can largely ignore the report until you see a new failure.
+  Then, as you work on your project and push commits, <span class="text-warning">Dead</span><span class="text-white">pendency</span> will monitor your dependency health. You can largely ignore the check until you see a new failure.
 </p>
