@@ -29,170 +29,73 @@ title: Deadpendency Getting Started
 </p>
 
 <p>
-  The report will either pass, pass with warnings or fail. The other possibility is that <span class="text-warning">Dead</span><span class="text-white">pendency</span> will not find your dependencies.
+  There are a few possible results from the report.
 </p>
 
-<h3>The Report Passes</h4>
+<h3>No Dependencies Found</h3>
 
-ADD IMAGE
+<p>This is due to either using a non-supported language, or more likely, your dependency files are in non-standard locations.</p>
 
 <p>
-  This means all your dependencies are actively being maintained. <span class="text-warning">Dead</span><span class="text-white">pendency</span> will continue to monitor your dependencies as new commits are pushed. Nothing to do here.
+  Refer to <a href="/language-support">language support</a> for the default dependency files loaded. You may need to configure additional dependency files in the <span class="text-warning">Dead</span><span class="text-white">pendency</span> config.
 </p>
 
-<h3>The Report Passes with Warnings</h4>
-
-ADD IMAGE
+<h3>The Check Passes</h3>
 
 <p>
-
+  This indicates that all your dependencies are actively being maintained. <span class="text-warning">Dead</span><span class="text-white">pendency</span> will continue to monitor your dependencies as new commits are pushed. Nothing to do here.
 </p>
 
-<p>Once installed in a repository, the <span class="text-warning">Dead</span><span class="text-white">pendency</span> check will run on (the newest commit of) every git push.</p>
-
-<p><span class="text-warning">Dead</span><span class="text-white">pendency</span> will automatically search for dependency files based on the top 2 languages in use on your GitHub repository. It will then check the dependencies for project health and produce the <span class="text-warning">Dead</span><span class="text-white">pendency</span> report (<a href="https://github.com/deadpendency/deadpendency-example/pull/1/checks" target="_blank" rel="noopener">see example</a>). Unhealthy dependencies will trigger a check failure.</p>
-
-<p>Refer to <a href="/language-support">language support</a> for information on what dependency files are supported and automatically loaded.</p>
-
-<h3 id="configuration"><a href="#configuration">Configuration</a></h3>
+<h3>The Check Passes with Warnings</h3>
 
 <p>
-  Configuration is done by including a <code>.deadpendency/config.yaml</code> file in your GitHub repository source. This file is optional.
+  This indicates that some of your dependencies have health concerns. For example, there may be no commits within the last year.
 </p>
-
-<h4 id="additional-dependency-files"><a href="#additional-dependency-files">Additional Dependency Files</a></h4>
 
 <p>
-  In some cases you have additional, or different dependency files to load than <a href="/language-support">the default ones</a>. These can be loaded like:
+  Warnings serve to provide a quick report on dependencies that may become problematic in the future. It is recommended you configure (LINK ME) your failure thresholds so that only when the check fails does it a mean a dependency is unhealthy enough that it should be reviewed.
 </p>
 
-<pre><code class="language-yaml">additional-dependency-files:
-  - type: pip-requirements-txt
-    path: other-dependencies.txt
-
-  - type: pipenv-pipfile
-    path: custom/CustomPipfile
-</code></pre>
-
-<h5>File Types</h5>
+<h3>The Check Fails</h3>
 
 <p>
-  <ul>
-    <li>JavaScript Npm Package File - <code>npm-package-json</code></li>
-    <li>Python Pip Requirements File - <code>pip-requirements-txt</code></li>
-    <li>Python Pipenv Pipfile - <code>pipenv-pipfile</code></li>
-    <li>PHP Packagist Compose File - <code>packagist-composer-json</code></li>
-    <li>Ruby Bundler Gemfile - <code>bundler-gemfile</code></li>
-    <li>Ruby Gemspec - <code>rubygems-gemspec</code></li>
-    <li>Haskell Cabal File - <code>haskell-cabal</code></li>
-    <li>Haskell Hpack File - <code>hpack-package-yaml</code></li>
-    <li>Rust Crates Cargo File - <code>crates-cargo-toml</code></li>
-    <li>C# .NET Project File - <code>dotnet-csharp-project</code></li>
-    <li>Visual Basic .NET Project File - <code>dotnet-visualbasic-project</code></li>
-    <li>Maven Pom Xml File - <code>maven-pom-xml</code></li>
-    <li>Build Gradle File - <code>build-gradle</code></li>
-  </ul>
+  This indicates that some of your dependencies have serious health concerns. For example, they may have been flagged as deprecated.
 </p>
-
-<h4 id="additional-dependencies"><a href="#additional-dependencies">Additional Dependencies</a></h4>
-
-<p>Useful when there are specific additional dependencies you want to be checked that are missing from your dependency files. Or for some reason <span class="text-warning">Dead</span><span class="text-white">pendency</span> is not detecting them.</p>
-
-<pre><code class="language-yaml">additional-deps:
-  javascript:
-    # additional deps found in the package registry
-    - react
-    - react-dom
-
-    # direct repository dependencies
-    - repo: jquery/jquery
-    # name can be included so Deadpendency can load the package details in the registry
-    - name: random-on-github
-      repo: some-org/super-random
-
-  # unsupported languages can still have additional repository dependencies
-  cool-lang:
-  - name: cool-dep
-    repo: cool/dep
-
-</code></pre>
-
-<h5>Language Keywords</h5>
 
 <p>
-  <ul>
-    <li><code>javascript</code></li>
-    <li><code>typescript</code></li>
-    <li><code>php</code></li>
-    <li><code>python</code></li>
-    <li><code>ruby</code></li>
-    <li><code>haskell</code></li>
-    <li><code>rust</code></li>
-    <li><code>csharp</code></li>
-    <li><code>visualbasic</code></li>
-    <li><code>java</code></li>
-    <li><code>kotlin</code></li>
-  </ul>
+  At this point you should review the failures. You then have a few options.
 </p>
 
-<h4 id="ignore-dependencies"><a href="#ignore-dependencies">Ignore Dependencies</a></h4>
+<h4>Ignore the failing dependencies</h4>
 
-<p>Useful when you choose to depend on an unhealthy dependency.</p>
+<p>
+  Sometimes there is no choice but to depend on an inactive or unhealthy dependency. For example, there may be no viable alternatives.
+</p>
 
-<pre><code class="language-yaml">ignore-failures:
-  - react-dom
-  - angular
-</code></pre>
+<p>In this case it is recommended to ignore the dependency (LINK ME) from being checked by deadpendency.</p>
 
-<h4 id="configure-checks"><a href="#configure-checks">Configure <span class="text-warning">Dead</span><span class="text-white">pendency</span> checks</a></h4>
+<h4>Adjust your failure thresholds</h4>
 
-<p>Each language ecosystem is different. What might be considered unhealthy for a JavaScript dependency may be fine in a more niche language.</p>
+<p>
+  Depending on your ecosystem, different failure thresholds for <span class="text-warning">Dead</span><span class="text-white">pendency</span> may make sense. Or you may decide to disable (or set as a warning) some checks entirely.
+</p>
 
-<h5>The default config</h5>
+<p>
+  It is recommended that you tune the checks so that when failures happen, the dependency is definitely unhealthy enough to consider switching away.
+</p>
 
-<pre><code class="language-yaml">rules-config:
-  no-recent-package-release:
-    warn-at-months: 18
-    fail-at-months: 24
-  no-recent-commit:
-    warn-at-months: 12
-    fail-at-months: 18
-  few-yearly-commits:
-    warn-at-count: 2
-    fail-at-count: disabled # does not fail by default
+<h4>Switch to an alternative</h4>
 
-  # these can be 'disabled', 'warn' or 'fail'
-  repository-archived: fail
-  repository-is-fork: warn
-  package-deprecated: fail
-  single-recent-author: warn
-</code></pre>
+<p>
+  If a dependency is not actively maintained, then ideally you want to switch to a dependency which is.
+</p>
 
-<h5>Customize the config</h5>
+<h2>Using <span class="text-warning">Dead</span><span class="text-white">pendency</span> Long Term</h2>
 
-<p>Unless a <code>rules-config</code> is provided, the defaults above are used. Settings can be overriden as per the below example.</p>
+<p>
+  It is recommended to keep your <span class="text-warning">Dead</span><span class="text-white">pendency</span> passing, by ignoring or switching away from 'dead' dependencies.
+</p>
 
-<pre><code class="language-yaml">rules-config:
-  no-recent-package-release:
-    warn-at-months: 6
-    # fail-at-months: 24  - omitted to use the default
-  no-recent-commit:
-    warn-at-months: 3
-    fail-at-months: disabled # disable the failure threshhold
-
-  few-yearly-commits: disabled # or an entire check can be disabled
-
-  single-recent-author: disabled # disable this check too
-
-  repository-is-fork: fail # this warns by default, but we want it to fail instead
-</code></pre>
-
-<p>Note: the defaults may be adjusted from time to time.</p>
-
-<p>See <a href="/rules">rules</a> for detailed information on rules and defaults.</p>
-
-<h2>Feedback</h2>
-
-<p>If you get any unexpected behavior, or if you want a specific feature, please give feedback via <a href="https://github.com/deadpendency/deadpendency/issues" target="_blank" rel="noopener">this GitHub repository</a>.</p>
-
-</div>
+<p>
+  Then, as you work on your project and push commits, <span class="text-warning">Dead</span><span class="text-white">pendency</span> will monitor your dependency health. You can largely ignore the report until you see a new failure.
+</p>
