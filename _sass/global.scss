@@ -135,6 +135,14 @@ h2, h3, h4 {
   }
 }
 
+h3 {
+  color: #d55abf;
+}
+
+h4 {
+  color: #45d2b2;
+}
+
 .language-support svg {
   background-size: 30px 30px;
 }
@@ -164,7 +172,6 @@ h2, h3, h4 {
 // FAQ page
 
 .faq-page h4 {
-  color: #45d2b2;
   margin-top: 20px;
   margin-bottom: 20px;
 }

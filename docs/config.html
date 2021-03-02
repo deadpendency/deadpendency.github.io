@@ -3,30 +3,16 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
-title: Deadpendency usage
+title: Deadpendency Configuration
 ---
 <div class="faq-page">
-<h1 class="mb-4"><span class="text-warning">Dead</span><span class="text-white">pendency</span> Usage</h1>
+<h1 class="mb-4"><span class="text-warning">Dead</span><span class="text-white">pendency</span> Configuration</h1>
 
 <h2 id="example"><a href="#example">Example</a></h2>
 
 <p>See a <a href="https://github.com/deadpendency/deadpendency-example" target="_blank" rel="noopener">detailed example</a> of using <span class="text-warning">Dead</span><span class="text-white">pendency</span>.</p>
 
-<h2 id="installation"><a href="#installation">Installation</a></h2>
-
-<p>
-  Go to the <a href="https://github.com/marketplace/deadpendency" target="_blank" rel="noopener">Deadpendency app on GitHub marketplace</a> and install it. Select which repositories to install the GitHub app on.
-</p>
-
-<h2 id="usage"><a href="#usage">Usage</a></h2>
-
-<p>Once installed in a repository, the <span class="text-warning">Dead</span><span class="text-white">pendency</span> check will run on (the newest commit of) every git push.</p>
-
-<p><span class="text-warning">Dead</span><span class="text-white">pendency</span> will automatically search for dependency files based on the top 2 languages in use on your GitHub repository. It will then check the dependencies for project health and produce the <span class="text-warning">Dead</span><span class="text-white">pendency</span> report (<a href="https://github.com/deadpendency/deadpendency-example/pull/1/checks" target="_blank" rel="noopener">see example</a>). Unhealthy dependencies will trigger a check failure.</p>
-
-<p>Refer to <a href="/language-support">language support</a> for information on what dependency files are supported and automatically loaded.</p>
-
-<h3 id="configuration"><a href="#configuration">Configuration</a></h3>
+<h2 id="usage"><a href="#usage">Configuration</a></h2>
 
 <p>
   Configuration is done by including a <code>.deadpendency/config.yaml</code> file in your GitHub repository source. This file is optional.
@@ -35,7 +21,7 @@ title: Deadpendency usage
 <h4 id="additional-dependency-files"><a href="#additional-dependency-files">Additional Dependency Files</a></h4>
 
 <p>
-  In some cases you have additional, or different dependency files to load than <a href="/language-support">the default ones</a>. These can be loaded like:
+  In some cases you have additional, or different dependency files to load than <a href="/language-support">the default ones</a>.
 </p>
 
 <pre><code class="language-yaml">additional-dependency-files:
@@ -142,7 +128,7 @@ title: Deadpendency usage
 
 <h5>Customize the config</h5>
 
-<p>Unless a <code>rules-config</code> is provided, the defaults above are used. Settings can be overriden as per the below example.</p>
+<p>Unless a <code>rules-config</code> is provided, the defaults above are used. Settings can be overridden as per the below example.</p>
 
 <pre><code class="language-yaml">rules-config:
   no-recent-package-release:
@@ -161,10 +147,4 @@ title: Deadpendency usage
 
 <p>Note: the defaults may be adjusted from time to time.</p>
 
-<p>See <a href="/rules">rules</a> for detailed information on rules and defaults.</p>
-
-<h2>Feedback</h2>
-
-<p>If you get any unexpected behavior, or if you want a specific feature, please give feedback via <a href="https://github.com/deadpendency/deadpendency/issues" target="_blank" rel="noopener">this GitHub repository</a>.</p>
-
-</div>
+<p>See <a href="rules">rules</a> for detailed information on rules and defaults.</p>
