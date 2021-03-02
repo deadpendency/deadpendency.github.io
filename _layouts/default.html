@@ -26,12 +26,13 @@
           <h3 class="float-md-start mb-0"><a href="/"><span class="text-warning">Dead</span><span class="text-white">pendency</span></a></h3>
 
           {% assign currentPage = page.url | downcase | remove: '.html' %}
+          {% assign pageDirectory = page.dir | downcase %}
 
           <nav class="nav nav-masthead justify-content-center float-md-end">
             <a class="nav-link {% if currentPage == '/' %}active{% endif %}" href="/">Home</a>
             <a class="nav-link {% if currentPage == '/why' %}active{% endif %}" href="/why">Why?</a>
-            <a class="nav-link {% if currentPage == '/usage' %}active{% endif %}" href="/docs/getting-started">Getting Started</a>
-            <a class="nav-link {% if currentPage == '/language-support' %}active{% endif %}" href="/docs">Documentation</a>
+            <a class="nav-link {% if currentPage == '/docs/getting-started' %}active{% endif %}" href="/docs/getting-started">Getting Started</a>
+            <a class="nav-link {% if currentPage == '/docs' or pageDirectory == '/docs/' and currentPage != '/docs/getting-started' %}active{% endif %}" href="/docs">Documentation</a>
             <a class="nav-link {% if currentPage == '/pricing' %}active{% endif %}" href="/pricing">Pricing</a>
             <a class="nav-link {% if currentPage == '/faq' %}active{% endif %}" href="/faq">FAQ</a>
             <a class="install-button btn btn-success" href="https://github.com/marketplace/deadpendency" target="_blank" rel="noopener">Install On GitHub</a>
