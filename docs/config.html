@@ -98,9 +98,15 @@ title: Deadpendency Configuration
 <p>Useful when you choose to depend on an unhealthy dependency.</p>
 
 <pre><code class="language-yaml">ignore-failures:
-  - react-dom
-  - angular
+    # programming language is needed because dependency names can overlap between languages
+    javascript:
+      - react-dom
+      - angular
 </code></pre>
+
+<p>
+  When programming languages have the same package registry, ignoring in one language will ignore for all languages. For example, if you ignore <code>react</code> in <code>javascript</code>, it will also ignore <code>react</code> in <code>typescript</code>.
+</p>
 
 <h4 id="configure-checks"><a href="#configure-checks">Configure <span class="text-warning">Dead</span><span class="text-white">pendency</span> checks</a></h4>
 
