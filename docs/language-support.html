@@ -52,15 +52,19 @@ redirect_from:
         <ul>
           <li><a href="https://pip.pypa.io/en/stable/reference/pip_install/#requirements-file-format" target="_blank" rel="noopener">Pip Requirements</a></li>
           <li><a href="https://pipenv.pypa.io/en/stable/install/#installing-packages-for-your-project" target="_blank" rel="noopener">Pipenv Pipfile</a></li>
+          <li><a href="https://www.python.org/dev/peps/pep-0518/" target="_blank" rel="noopener">Pyproject.toml</a></li>
         </ul>
       </td>
       <td>
         <ul>
           <li><code>./**/requirements.txt</code></li>
           <li><code>./**/Pipfile</code></li>
+          <li><code>./**/pyproject.toml</code></li>
         </ul>
       </td>
-      <td>Will not follow <code>requirements.txt</code> includes eg. <code>-r other-requirements.txt</code>.</td>
+      <td>
+        Will not follow <code>requirements.txt</code> includes eg. <code>-r other-requirements.txt</code>.<br/><code>pyproject.toml</code> support includes basic and <a href="https://python-poetry.org/" target="_blank" rel="noopener">Poetry</a> dependencies.
+      </td>
     </tr>
     <tr>
       <th scope="row">Ruby</td>
