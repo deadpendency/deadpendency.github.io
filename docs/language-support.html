@@ -51,6 +51,7 @@ redirect_from:
       <td>
         <ul>
           <li><a href="https://pip.pypa.io/en/stable/reference/pip_install/#requirements-file-format" target="_blank" rel="noopener">Pip Requirements</a></li>
+          <li><a href="https://packaging.python.org/tutorials/packaging-projects/" target="_blank" rel="noopener">Setup Py</a></li>
           <li><a href="https://pipenv.pypa.io/en/stable/install/#installing-packages-for-your-project" target="_blank" rel="noopener">Pipenv Pipfile</a></li>
           <li><a href="https://www.python.org/dev/peps/pep-0518/" target="_blank" rel="noopener">Pyproject.toml</a></li>
         </ul>
@@ -58,12 +59,17 @@ redirect_from:
       <td>
         <ul>
           <li><code>./**/requirements.txt</code></li>
+          <li><code>./**/setup.py</code></li>
           <li><code>./**/Pipfile</code></li>
           <li><code>./**/pyproject.toml</code></li>
         </ul>
       </td>
       <td>
-        Will not follow <code>requirements.txt</code> includes eg. <code>-r other-requirements.txt</code>.<br/><code>pyproject.toml</code> support includes basic, <a href="https://python-poetry.org/" target="_blank" rel="noopener">Poetry</a> and <a href="https://flit.readthedocs.io/" target="_blank" rel="noopener">Flit</a> dependencies.
+        <ul>
+          <li>Will not follow <code>requirements.txt</code> includes eg. <code>-r other-requirements.txt</code>.</li>
+          <li><code>pyproject.toml</code> support includes basic, <a href="https://python-poetry.org/" target="_blank" rel="noopener">Poetry</a> and <a href="https://flit.readthedocs.io/" target="_blank" rel="noopener">Flit</a> dependencies.</li>
+          <li><code>setup.py</code> <a href="https://github.com/deadpendency/deadpendency/issues/35" target="_blank" rel="noopener">does not currently support git dependencies</a></li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -81,21 +87,33 @@ redirect_from:
           <li><code>./**/*.gemspec</code></li>
         </ul>
       </td>
-      <td><code>*.gemspec</code> search only goes 1 level deep. <a href="https://github.com/deadpendency/deadpendency/issues/8" target="_blank" rel="noopener">Git blocks not yet supported</a>.</td>
+      <td>
+        <ul>
+          <li><a href="https://github.com/deadpendency/deadpendency/issues/8" target="_blank" rel="noopener">Git blocks not yet supported</a>.</li>
+        </ul>
+      </td>
     </tr>
     <tr>
       <th scope="row">PHP</td>
       <td>✅</td>
       <td><a href="https://getcomposer.org/doc/01-basic-usage.md#composer-json-project-setup" target="_blank" rel="noopener">Composer file</a></td>
       <td><code>./**/composer.json</code></td>
-      <td>VCS dependencies <a href="https://github.com/deadpendency/deadpendency/issues/9" target="_blank" rel="noopener">not yet supported</a>.</td>
+      <td>
+        <ul>
+          <li>VCS dependencies <a href="https://github.com/deadpendency/deadpendency/issues/9" target="_blank" rel="noopener">not yet supported</a>.</li>
+        </ul>
+      </td>
     </tr>
     <tr>
       <th scope="row">Rust</td>
       <td>✅</td>
       <td><a href="https://doc.rust-lang.org/cargo/reference/manifest.html" target="_blank" rel="noopener">Cargo file</a></td>
       <td><code>./**/Cargo.toml</code></td>
-      <td><a href="https://github.com/deadpendency/deadpendency/issues?q=is%3Aissue+is%3Aopen+label%3Alanguage%2Frust" target="_blank" rel="noopener">Some dependency types not detected</a>.</td>
+      <td>
+        <ul>
+          <li><a href="https://github.com/deadpendency/deadpendency/issues?q=is%3Aissue+is%3Aopen+label%3Alanguage%2Frust" target="_blank" rel="noopener">Some dependency types not detected</a>.</li>
+        </ul>
+      </td>
     </tr>
     <tr>
       <th scope="row">Haskell</td>
@@ -112,7 +130,11 @@ redirect_from:
           <li><code>./**/package.yaml</code></li>
         </ul>
       </td>
-      <td><a href="https://github.com/deadpendency/deadpendency/issues?q=is%3Aissue+is%3Aopen+label%3Alanguage%2Fhaskell" target="_blank" rel="noopener">There are some current limitations</a>.</td>
+      <td>
+        <ul>
+          <li><a href="https://github.com/deadpendency/deadpendency/issues?q=is%3Aissue+is%3Aopen+label%3Alanguage%2Fhaskell" target="_blank" rel="noopener">There are some current limitations</a>.</li>
+        </ul>
+      </td>
     </tr>
     <tr>
       <th scope="row">.NET</td>
@@ -128,7 +150,11 @@ redirect_from:
           <li><code>./**/*.vbproj</code></li>
         </ul>
       </td>
-      <td><code>packages.config</code> format is not supported.</td>
+      <td>
+        <ul>
+          <li><code>packages.config</code> format is not supported.</li>
+        </ul>
+      </td>
     </tr>
     <tr>
       <th scope="row">Java</td>
@@ -146,7 +172,9 @@ redirect_from:
         </ul>
       </td>
       <td>
-        Maven packages often don't reference the source repository. Only searches 1 directory deep for dependency files.
+        <ul>
+          <li>Maven packages often don't reference the source repository.</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -166,21 +194,33 @@ redirect_from:
           <li><code>./**/build.gradle.kts</code></li>
         </ul>
       </td>
-      <td>Maven packages often don't reference the source repository. Only searches 1 directory deep for dependency files.</td>
+      <td>
+        <ul>
+          <li>Maven packages often don't reference the source repository.</li>
+        </ul>
+      </td>
     </tr>
     <tr>
       <th scope="row">Go</td>
       <td>❌</td>
       <td></td>
       <td></td>
-      <td><a href="https://github.com/deadpendency/deadpendency/issues/3" target="_blank" rel="noopener">Currently no clear registry API to determine source repository</a>.</td>
+      <td>
+        <ul>
+          <li><a href="https://github.com/deadpendency/deadpendency/issues/3" target="_blank" rel="noopener">Currently no clear registry API to determine source repository</a>.</li>
+        </ul>
+      </td>
     </tr>
     <tr>
       <th scope="row">Others</td>
       <td>❔</td>
       <td></td>
       <td></td>
-      <td>If you want a language supported please <a href="https://github.com/deadpendency/deadpendency/issues/new" target="_blank" rel="noopener">open an issue</a>.</td>
+      <td>
+        <ul>
+          <li>If you want a language supported please <a href="https://github.com/deadpendency/deadpendency/issues/new" target="_blank" rel="noopener">open an issue</a>.</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
