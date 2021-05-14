@@ -7,7 +7,7 @@ cd "$(dirname "$0")"/../..
 # /vimeo.com/85490944/ check fails from the travis build for some reason
 
 FLAGS=" \
-  --url-ignore=#,#0,/vimeo.com/85490944/,/github.com/open-socialism/open-socialism-site/edit/master/,/opensocialism.com/ \
+  --url-ignore=#,#0,/deadpendency.com/ \
   --assume-extension \
   --check-favicon \
   --check_opengraph \

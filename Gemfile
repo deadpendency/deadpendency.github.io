@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 gem 'github-pages', group: :jekyll_plugins
+gem 'html-proofer'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
