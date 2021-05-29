@@ -65,6 +65,8 @@ title: Deadpendency Configuration
     # additional deps found in the package registry
     - react
     - react-dom
+    # JS dependencies can have a namespace
+    - '@testing-library/jest-dom'
 
     # direct repository dependencies
     - repo: jquery/jquery
@@ -72,10 +74,22 @@ title: Deadpendency Configuration
     - name: random-on-github
       repo: some-org/super-random
 
+  java:
+    # java also has namespaced deps in the format of 'the.namespace/package-name'
+    - org.hibernate/hibernate-core
+
+  php:
+    # php packages also are namespaced
+    - psr/log
+
+  csharp:
+    # .NET packages are treated as a single dependency name. The '/' should not be included.
+    - Newtonsoft.Json
+
   # unsupported languages can still have additional repository dependencies
   cool-lang:
-  - name: cool-dep
-    repo: cool/dep
+    - name: cool-dep
+      repo: cool/dep
 
 </code></pre>
 
@@ -106,6 +120,11 @@ title: Deadpendency Configuration
     javascript:
       - react-dom
       - angular
+
+    java:
+      # namespaced dependencies can be ignored in the format of 'namespace/package-name'
+      # see the additional dependencies documentation above for more info on language nuances around package names
+      - org.hibernate/hibernate-core
 </code></pre>
 
 <p>
