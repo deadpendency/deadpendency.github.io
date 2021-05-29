@@ -65,6 +65,8 @@ title: Deadpendency Configuration
     # additional deps found in the package registry
     - react
     - react-dom
+    # JS dependencies can have a namespace
+    - '@testing-library/jest-dom'
 
     # direct repository dependencies
     - repo: jquery/jquery
@@ -73,7 +75,7 @@ title: Deadpendency Configuration
       repo: some-org/super-random
 
   java:
-    # namespaced dependencies can be included in the format of 'namespace/package-name'
+    # java also has namespaced deps in the format of 'the.namespace/package-name'
     - org.hibernate/hibernate-core
 
   php:
