@@ -51,6 +51,7 @@ title: Deadpendency Configuration
     <li>Visual Basic .NET Project File - <code>dotnet-visualbasic-project</code></li>
     <li>Maven Pom Xml File - <code>maven-pom-xml</code></li>
     <li>Build Gradle File - <code>build-gradle</code></li>
+    <li>Go Module File - <code>go-mod</code></li>
   </ul>
 </p>
 
@@ -65,8 +66,6 @@ title: Deadpendency Configuration
     # additional deps found in the package registry
     - react
     - react-dom
-    # JS dependencies can have a namespace
-    - '@testing-library/jest-dom'
 
     # direct repository dependencies
     - repo: jquery/jquery
@@ -75,16 +74,8 @@ title: Deadpendency Configuration
       repo: some-org/super-random
 
   java:
-    # java also has namespaced deps in the format of 'the.namespace/package-name'
+    # java names are represented by 'groupId/artifactId'
     - org.hibernate/hibernate-core
-
-  php:
-    # php packages also are namespaced
-    - psr/log
-
-  csharp:
-    # .NET packages are treated as a single dependency name. The '/' should not be included.
-    - Newtonsoft.Json
 
   # unsupported languages can still have additional repository dependencies
   cool-lang:
@@ -108,6 +99,7 @@ title: Deadpendency Configuration
     <li><code>visualbasic</code></li>
     <li><code>java</code></li>
     <li><code>kotlin</code></li>
+    <li><code>golang</code></li>
   </ul>
 </p>
 

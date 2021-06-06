@@ -141,7 +141,7 @@ redirect_from:
       <td>✅</td>
       <td>
         <ul>
-          <li><a href="https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files" target="_blank" rel="noopener"><code>PackageReference</code> in project files</a></li>
+          <li><a href="https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files" target="_blank" rel="noopener"><code>PackageReference</code> in project file</a></li>
         </ul>
       </td>
       <td>
@@ -202,12 +202,20 @@ redirect_from:
     </tr>
     <tr>
       <th scope="row">Go</td>
-      <td>❌</td>
-      <td></td>
-      <td></td>
+      <td>✅</td>
       <td>
         <ul>
-          <li><a href="https://github.com/deadpendency/deadpendency/issues/3" target="_blank" rel="noopener">Currently no clear registry API to determine source repository</a>.</li>
+          <li><a href="https://golang.org/ref/mod" target="_blank" rel="noopener">Go module file</a></li>
+        </ul>        
+      </td>
+      <td>
+        <ul>
+          <li><code>./**/go.mod</code></li>
+        </ul>        
+      </td>
+      <td>
+        <ul>
+          <li>Repository is inferred based on the dependency name as <a href="https://github.com/deadpendency/deadpendency/issues/41" target="_blank" rel="noopener"><code>pkg.go.dev</code> API does not reference the source repository</a>.</li>
         </ul>
       </td>
     </tr>
