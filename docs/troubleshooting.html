@@ -1,0 +1,23 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: page
+title: Deadpendency Troubleshooting
+---
+<div class="faq-page">
+<h1 class="mb-4"><span class="text-warning">Dead</span><span class="text-white">pendency</span> Configuration</h1>
+
+<h2 id="report-truncation"><a href="#example">Report Truncation</a></h2>
+
+<p>
+  The <span class="text-warning">Dead</span><span class="text-white">pendency</span> report is GitHub <a href="https://docs.github.com/en/rest/reference/checks#runs" target="_blank" rel="noopener">check run</a>. The bulk of the report lives in the check run body, which has a (currently undocumented) limit of 65335 characters.
+</p>
+
+<p>
+  When a repository has enough dependencies in some cases it will exceed this limit. In this scenario <span class="text-warning">Dead</span><span class="text-white">pendency</span> will remove non-key information from the report. Currently, this only means that dependencies which are passing, will no longer inlcude links to the package registry or source repository.
+</p>
+
+<p>
+  Longer term, the <span class="text-warning">Dead</span><span class="text-white">pendency</span> report will be <a href="https://github.com/deadpendency/deadpendency/issues/36" target="_blank" rel="noopener">available external to GitHub</a> to avoid the problem entirely.
+</p>
