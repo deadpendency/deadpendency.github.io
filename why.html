@@ -10,15 +10,7 @@ title: Why use Deadpendency?
 
 <h2>TL;DR</h2>
 
-<p>
-  <ul>
-    <li>Dependency updates are a chore, but are essential over the long term. The best way to manage these updates, is to <a href="https://www.netcetera.com/home/stories/expertise/20170406-software-updates-inside-it.html" target="_blank" rel="noopener">proactively keep dependencies up to date</a>.</li>
-    <li>Thankfully, there are amazing <a href="https://dependabot.com/" target="_blank" rel="noopener">automated dependency update tools</a>.</li>
-    <li>There is a gap though, a dependency that has become a dead project will never have another update released. A 'dead' dependency has the same downsides as an un-updated dependency.</li>
-    <li><strong><span class="text-warning">Dead</span><span class="text-white">pendency</span> is a tool to report on and alert when your dependencies become unhealthy software projects.</strong> For example, the project becomes inactive, or is deprecated.</li>
-    <li>This automates what is currently an ongoing manual process (or oft neglected) to enable maximum dependency health. <span class="text-warning">Dead</span><span class="text-white">pendency</span> should be used in conjunction with automated dependency update tools (where possible).</li>
-  </ul>
-</p>
+<p>It is useful to automatically know when your dependencies become inactive or deprecated as you should consider switching away.</p>
 
 <h2>Software dependency updates are essential</h2>
 
@@ -33,7 +25,7 @@ title: Why use Deadpendency?
 <h2>Dependencies should be regularly and automatically updated</h2>
 
 <p>
-  To avoid application code falling behind platform and dependency churn, updates should be regularly applied. Avoidance of dependency updates leads to large 'big bang' updates which are more risky and time consuming.
+  To avoid application code falling behind platform and dependency churn, <a href="https://www.netcetera.com/home/stories/expertise/20170406-software-updates-inside-it.html" target="_blank" rel="noopener">updates should be regularly applied</a>. Avoidance of dependency updates leads to large 'big bang' updates which are more risky and time consuming.
 </p>
 
 <p>
@@ -80,7 +72,7 @@ title: Why use Deadpendency?
 <h3>A complete dependency project health report</h3>
 
 <p>
-  Each push produces a dependency project health report (in the form of a GitHub check run, see <a href="https://github.com/deadpendency/deadpendency-example/pull/1/checks" target="_blank" rel="noopener">this example</a>). The report gives a quick snapshot of dependency project health, including links to the package and the source repository to enable additional review. Dependencies that are becoming unhealthy will have warnings, but will not fail the check.
+  Each push produces a <a href="https://github.com/deadpendency/deadpendency-example/pull/1/checks" target="_blank" rel="noopener">dependency project health report</a>. The report gives a quick snapshot of dependency project health, including links to the package and the source repository to enable additional review. Dependencies that are becoming unhealthy will have warnings, but will not fail the check.
 </p>
 
 <h3>Fast feedback on pull requests</h3>
