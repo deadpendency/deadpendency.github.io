@@ -59,7 +59,7 @@ title: Deadpendency Configuration
 
 <p>Useful when there are specific additional dependencies you want to be checked that are missing from your dependency files. Or for some reason <span class="text-warning">Dead</span><span class="text-white">pendency</span> is not detecting them.</p>
 
-<p>If you provide a dependency as additional AND that dependency is found in your dependency files, the additional dependency will take precedence. This means you can provide a different repository if required.</p>
+<p>If you provide a dependency as additional AND that dependency is found in your dependency files, the additional dependency will take precedence. This means you can provide a different source repository if required.</p>
 
 <pre><code class="language-yaml">additional-deps:
   javascript:
@@ -115,7 +115,8 @@ title: Deadpendency Configuration
 
     java:
       # namespaced dependencies can be ignored in the format of 'namespace/package-name'
-      # see the additional dependencies documentation above for more info on language nuances around package names
+      # see the additional dependencies documentation above for more info on
+      # language nuances around package names
       - org.hibernate/hibernate-core
 </code></pre>
 
