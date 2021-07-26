@@ -10,15 +10,13 @@ redirect_from:
 <div class="language-support-page">
 <h1 class="mb-4"><span class="text-warning">Dead</span><span class="text-white">pendency</span> Language Support</h1>
 
-<p>Dependencies are currently only analyzed by <span class="text-warning">Dead</span><span class="text-white">pendency</span> when hosted on GitHub.</p>
+<p>Dependencies are currently only analyzed by <span class="text-warning">Dead</span><span class="text-white">pendency</span> when hosted on GitHub.com.</p>
 
 <p>
-  <span class="text-warning">Dead</span><span class="text-white">pendency</span> will only load the dependency files of the top 2 programming languages used in a repository. <a href="config#additional-dependency-files">Additional dependency files can be configured</a>.
+  <span class="text-warning">Dead</span><span class="text-white">pendency</span> will load the dependency files of the top 2 programming languages used in a repository. It will only search 1 directory deep for these files, however <a href="config#additional-dependency-files">additional dependency files can be loaded via config</a>.
 </p>
 
-<p>
-  <span class="text-warning">Dead</span><span class="text-white">pendency</span> will only search 1 directory deep for dependency files.
-</p>
+<h2>Languages</h2>
 
 <table class="table table-dark">
   <thead>
@@ -67,8 +65,8 @@ redirect_from:
       <td>
         <ul>
           <li>Will not follow <code>requirements.txt</code> includes eg. <code>-r other-requirements.txt</code>.</li>
-          <li><code>pyproject.toml</code> support includes basic, <a href="https://python-poetry.org/" target="_blank" rel="noopener">Poetry</a> and <a href="https://flit.readthedocs.io/" target="_blank" rel="noopener">Flit</a> dependencies.</li>
           <li><code>setup.py</code> currently only supports basic use cases.</li>
+          <li><code>pyproject.toml</code> support includes basic, <a href="https://python-poetry.org/" target="_blank" rel="noopener">Poetry</a> and <a href="https://flit.readthedocs.io/" target="_blank" rel="noopener">Flit</a> dependencies.</li>
         </ul>
       </td>
     </tr>
@@ -206,12 +204,12 @@ redirect_from:
       <td>
         <ul>
           <li><a href="https://golang.org/ref/mod" target="_blank" rel="noopener">Go module file</a></li>
-        </ul>        
+        </ul>
       </td>
       <td>
         <ul>
           <li><code>./**/go.mod</code></li>
-        </ul>        
+        </ul>
       </td>
       <td>
         <ul>
