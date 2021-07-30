@@ -60,9 +60,15 @@ body {
   margin-left: 1rem;
 }
 
+@media (max-width: 727px) {
+  .nav-masthead .install-button {
+    margin-top: 1rem;
+  }
+}
+
 .nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
+  color: #f8f9fa;
+  border-bottom-color: #f8f9fa;
 }
 
 .bd-placeholder-img {
@@ -96,7 +102,7 @@ a {
 }
 
 .global-footer a {
-  color: #fff;
+  color: #f8f9fa;
   margin-left: 1rem;
   text-decoration: none;
 }
