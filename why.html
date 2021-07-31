@@ -3,16 +3,17 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
-title: Why use Deadpendency?
+title: Why Use Deadpendency?
+header: Why Use Deadpendency?
+class: why-page
+toc: true
+toc_max: 2
 ---
-<div class="why-page">
-<h1 class="mb-4">Why Use <span class="text-warning">Dead</span><span class="text-white">pendency</span>?</h1>
-
 <h2>TL;DR</h2>
 
 <p>It is useful to automatically know when your dependencies become inactive or deprecated as you should consider switching away.</p>
 
-<h2>Software dependency updates are essential</h2>
+<h2 id="updates-are-essential">Software dependency updates are essential</h2>
 
 <p>
   A given release of an application works for a given set of dependencies and for a given platform. While the application code will not change, the dependencies and platforms continue to change introducing incompatibilities. This process is often referred to as <a href="https://en.wikipedia.org/wiki/Software_rot" target="_blank" rel="noopener">bitrot</a>.
@@ -22,7 +23,7 @@ title: Why use Deadpendency?
   Bitrot is especially prevalent in modern software development, with most programming languages and other platforms having major updates yearly if not more frequently. The whole ecosystem including applications need to keep pace.
 </p>
 
-<h2>Dependencies should be regularly and automatically updated</h2>
+<h2 id="automoate-dep-updates">Dependencies should be regularly and automatically updated</h2>
 
 <p>
   To avoid application code falling behind platform and dependency churn, <a href="https://www.netcetera.com/home/stories/expertise/20170406-software-updates-inside-it.html" target="_blank" rel="noopener">updates should be regularly applied</a>. Avoidance of dependency updates leads to large 'big bang' updates which are more risky and time consuming.
@@ -32,7 +33,7 @@ title: Why use Deadpendency?
   Ideally, the dependency update process should be <a href="https://dependabot.com" target="_blank" rel="noopener">automated as much as possible</a>.
 </p>
 
-<h2>Dependencies sometimes will become 'dead' projects</h2>
+<h2 id="dependencies-can-die">Dependencies sometimes will become 'dead' projects</h2>
 
 <p>
   In open source, projects will sometimes become inactive, or be superseded. A 'dead' dependency locks you into an aging version that again subjects the application to the problems of bitrot.
@@ -42,7 +43,7 @@ title: Why use Deadpendency?
   However, automated dependency update tools will not alert you to this issue, as the application is already on the latest version. Thus, to be in the best possible state around dependencies, you need to be updating dependencies AND checking dependencies are still being actively maintained and released.
 </p>
 
-<h2>Dependency project health tracking is currently manual</h2>
+<h2 id="dep-health-tracking-manual">Dependency project health tracking is currently manual</h2>
 
 <p>
   Dependency project health tracking is currently a manual process. It involves keeping abreast of these projects and checking that there are still regular commits and releases. The process is ongoing as healthy dependencies now may become inactive in the future.
@@ -56,7 +57,7 @@ title: Why use Deadpendency?
   Sometimes applications need to depend on inactive dependencies as there are no viable alternatives. However, in some cases there are excellent alternatives and this is when dependency project health tracking provides the most value.
 </p>
 
-<h2><span class="text-warning">Dead</span><span class="text-white">pendency</span> automatically tracks and alerts on project health</h2>
+<h2 id="automated-project-health"><span class="text-warning">Dead</span><span class="text-white">pendency</span> automatically tracks and alerts on project health</h2>
 
 <p>
   <span class="text-warning">Dead</span><span class="text-white">pendency</span> automatically checks dependency project health upon every git push. It enables developers to be informed about dependencies that have become inactive so they can make informed choices.
@@ -66,16 +67,16 @@ title: Why use Deadpendency?
   The check is ongoing. As an application is worked on and git pushes made, the <span class="text-warning">Dead</span><span class="text-white">pendency</span> check is continually run. Any unhealthy dependencies will fail the check, alerting developers to the issue with minimal effort required.
 </p>
 
-<h2>Other benefits of <span class="text-warning">Dead</span><span class="text-white">pendency</span></h2>
+<h2 id="other-benefits">Other benefits of <span class="text-warning">Dead</span><span class="text-white">pendency</span></h2>
 
 
-<h3>A complete dependency project health report</h3>
+<h3 id="health-report">A complete dependency project health report</h3>
 
 <p>
   Each push produces a <a href="https://github.com/deadpendency/deadpendency-example/pull/1/checks" target="_blank" rel="noopener">dependency project health report</a>. The report gives a quick snapshot of dependency project health, including links to the package and the source repository to enable additional review. Dependencies that are becoming unhealthy will have warnings, but will not fail the check.
 </p>
 
-<h3>Fast feedback on pull requests</h3>
+<h3 id="pr-fast-feedback">Fast feedback on pull requests</h3>
 
 <p>
   <span class="text-warning">Dead</span><span class="text-white">pendency</span> will run when a pull request is submitted. This means that if the pull request adds a new dependency, it will automatically have its project health checked.
@@ -85,7 +86,7 @@ title: Why use Deadpendency?
   In the scenario where the dependency is not being healthily maintained, this is flagged in the report. Thus the submitter is prompted to either select some alternative, or justify the unhealthy dependency's inclusion. This alleviates the pull request reviewers from manually doing this assessment and giving the feedback.
 </p>
 
-<h3>Avoid depending on old forked dependencies</h3>
+<h3 id="avoid-forks">Avoid depending on old forked dependencies</h3>
 
 <p>
   In some cases, a dependency will have a bug. The quickest way to deal with this is usually to <a href="https://docs.github.com/en/github/getting-started-with-github/fork-a-repo" target="_blank" rel="noopener">fork</a> the dependency and fix the bug. Then the application can depend upon the forked version, without requiring any assistance from the dependency's developers.
@@ -98,5 +99,3 @@ title: Why use Deadpendency?
 <p>
   <span class="text-warning">Dead</span><span class="text-white">pendency</span> immediately flags the dependency with a warning as it is using a fork. Over time, the fork will not be getting commits and will be flagged as unhealthy, reminding developers to switch back to the un-forked version.
 </p>
-
-</div>

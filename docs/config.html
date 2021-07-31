@@ -4,15 +4,16 @@
 
 layout: page
 title: Deadpendency Configuration
+header: Deadpendency Configuration
+class: config
+toc: true
+toc_max: 4
 ---
-<div class="faq-page">
-<h1 class="mb-4"><span class="text-warning">Dead</span><span class="text-white">pendency</span> Configuration</h1>
-
 <h2 id="example"><a href="#example">Example</a></h2>
 
 <p>See a <a href="https://github.com/deadpendency/deadpendency-example" target="_blank" rel="noopener">detailed example</a> of using <span class="text-warning">Dead</span><span class="text-white">pendency</span>.</p>
 
-<h2 id="usage"><a href="#usage">Configuration</a></h2>
+<h2 id="configuration"><a href="#usage">Configuration</a></h2>
 
 <p>
   Configuration is done by including a <code>.deadpendency/config.yaml</code> file in your GitHub repository source. This file is optional.
@@ -32,7 +33,7 @@ title: Deadpendency Configuration
     path: custom/CustomPipfile
 </code></pre>
 
-<h5>File Types</h5>
+<h5 id="file-types">File Types</h5>
 
 <p>
   <ul>
@@ -84,7 +85,7 @@ title: Deadpendency Configuration
 
 </code></pre>
 
-<h5>Language Keywords</h5>
+<h5 id="language-keywords">Language Keywords</h5>
 
 <p>
   <ul>
@@ -128,7 +129,7 @@ title: Deadpendency Configuration
 
 <p>Each language ecosystem is different. What might be considered unhealthy for a JavaScript dependency may be fine in a more niche language.</p>
 
-<h5>The default config</h5>
+<h5 id="default-config">The default config</h5>
 
 <pre><code class="language-yaml">rules-config:
   no-recent-package-release:
@@ -150,7 +151,7 @@ title: Deadpendency Configuration
   repository-not-found: warn
 </code></pre>
 
-<h5>Customize the config</h5>
+<h5 id="customize-config">Customize the config</h5>
 
 <p>Unless a <code>rules-config</code> is provided, the defaults above are used. Settings can be overridden as per the below example.</p>
 
