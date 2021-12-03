@@ -31,3 +31,6 @@ toc: false
 <p>
   <span class="text-warning">Dead</span><span class="text-white">pendency</span> makes a number of requests to external services, most notably GitHub. When a single repository has too many dependencies it is not possibly to reliably retrieve the dependency information without hitting rate limiting issues.
 </p>
+<p>
+  As such <span class="text-warning">Dead</span><span class="text-white">pendency</span> will reject the request when a repository has over 500 unique dependencies.
+</p>
