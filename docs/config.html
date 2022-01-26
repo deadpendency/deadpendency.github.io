@@ -56,6 +56,28 @@ toc_max: 4
   </ul>
 </p>
 
+
+<h4 id="disable-auto-file-load"><a href="#disable-auto-file-load">Disable Automatic Dependency File Load</a></h4>
+
+<p>
+  Deadpendency will search for dependency files based on the top 2 languages used in a repository. However, in some cases it  may find dependency files which you do not wish to load. They may be non-critical or transitive and so you are not concerned if they have project health issues.
+</p>
+
+<p>
+  In this case, you can disable the automatic dependency file search and load.
+</p>
+
+<pre><code class="language-yaml">disable-auto-file-load: true
+</code></pre>
+
+<p>
+  Alternatively, you can disable just for specific languages.
+</p>
+
+<pre><code class="language-yaml">disable-auto-file-load:
+  - javascript
+</code></pre>
+
 <h4 id="additional-dependencies"><a href="#additional-dependencies">Additional Dependencies</a></h4>
 
 <p>Useful when there are specific additional dependencies you want to be checked that are missing from your dependency files. Or for some reason <span class="text-warning">Dead</span><span class="text-white">pendency</span> is not detecting them.</p>
