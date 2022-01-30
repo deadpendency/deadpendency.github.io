@@ -34,3 +34,12 @@ toc: false
 <p>
   As such <span class="text-warning">Dead</span><span class="text-white">pendency</span> will reject the request when a repository has over 500 unique dependencies.
 </p>
+
+<h2 id="too-many-dependency-files"><a href="#too-many-dependency-files">Too Many Dependency Files</a></h2>
+
+<p>
+  <span class="text-warning">Dead</span><span class="text-white">pendency</span> makes a number of requests to external services, most notably GitHub. When a single repository has too many dependency files it is not possibly to reliably retrieve all those files without hitting rate limiting issues.
+</p>
+<p>
+  As such <span class="text-warning">Dead</span><span class="text-white">pendency</span> will reject the request when a repository has over 100 dependency files.
+</p>
